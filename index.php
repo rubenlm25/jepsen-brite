@@ -43,14 +43,19 @@
 				Upcoming events
 			</h2>
 			
+			
+			<!-- Template qui sera utilisé par PHP pour générer les events -->
 			<template>
 				<div>
+					<!-- Image de l'event -->
 					<figure>
 						<img src="" alt="">
 					</figure>
 
-					<h3>µ</h3>
+					<!-- Titre de l'event -->
+					<h3>µ/h3>
 
+					<!-- Date et heure de l'event -->
 					<ul>
 						<li>
 						</li>
@@ -58,6 +63,7 @@
 						</li>
 					</ul>
 
+					<!-- Bouton qui envoie sur la page event pour le voir en détail -->
 					<button>
 					</button>
 				</div>
