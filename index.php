@@ -53,7 +53,7 @@
 					</figure>
 
 					<!-- Titre de l'event -->
-					<h3>µ/h3>
+					<h3></h3>
 
 					<!-- Date et heure de l'event -->
 					<ul>
