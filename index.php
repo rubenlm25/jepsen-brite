@@ -10,6 +10,27 @@
 	</head>
 	
 	<body>
+		<?php
+			try
+			{
+				$database = new PDO('mysql:host=localhost;dbname=jepsen-brite;charset=utf8', 'root', '');
+			}
+			catch (Exception $e)
+			{
+				die('Erreur : ' . $e -> getMessage());
+			}
+
+			$response = $database -> query('SELECT * FROM users');
+
+			while ($data = $response -> fetch())
+			{
+				echo $data['nickname'];
+			}
+
+			$response -> closeCursor();
+		?>
+		
+		
 		<header>
 			<nav>
 				<ul>
@@ -53,7 +74,11 @@
 					</figure>
 
 					<!-- Titre de l'event -->
-					<h3></h3>
+					<h3>
+						<?php
+							// echo $data['nickname'];
+						?>
+					</h3>
 
 					<!-- Date et heure de l'event -->
 					<ul>
@@ -69,5 +94,9 @@
 				</div>
 			</template>
 		</main>
+
+		<?php
+			// $reponse -> closeCursor();
+		?>
 	</body>
 </html>
