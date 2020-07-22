@@ -23,8 +23,8 @@
     <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
     <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
-
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -53,16 +53,16 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" >Event</a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign UP</a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign out</a>
             </li>
 
         </ul>
