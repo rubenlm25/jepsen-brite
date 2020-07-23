@@ -1,15 +1,23 @@
+<!DOCTYPE html>
 
-<html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
-<?php require './include/header.php' ?>
-<?php require './include/functions.php' ?>
+
+<?php require_once './include/functions.php';
+      require './include/bdb.php';
+      ?>
 
 <!-- verification formulaire -->
 <?php
 if(!empty($_POST))
 {
     $errors = array();
-    require_once './include/bdb.php';
+
 
 
 
@@ -47,23 +55,25 @@ if(!empty($_POST))
     if(empty($errors))
     {
 
-        $requete = $pdo-> prepare("INSERT INTO users SET username = ?, password = ?, email = ?");
+        $requete = $pdo-> prepare("INSERT INTO users SET username = ?, password = ?, email = ?, confirmation_token= ?");
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT );
+        $token = str_random(60);
+       // debug($token);
+        //die();
 
-
-        $requete->execute([$_POST['username'], $password, $_POST['email']]);
-        die('account created !');
+        $requete->execute([$_POST['username'], $password, $_POST['email'], $token]);
+        $user_id = $pdo->lastInsertId();
+        mail($_POST['email'], 'confirmation de votre compte',"cliquez sur ce lien pour valider\n\nhttp://127.0.0.1/projects/jepsen-brite/confirm.php?id=$user_id&token=$token");
+       // die('account created !');
+        header('Location:profile.php');
+        exit();
 
     }
-    debug($errors);
-
-
-
-
-
+    //debug($errors);
 }
-?>
 
+?>
+<?php require './include/header.php' ?>
 
 
 
@@ -84,7 +94,7 @@ if(!empty($_POST))
 </div>
 <?php endif; ?>
 
-    <form  action="" method="POST" enctype="multipart/form-data">
+    <form  action="" method="POST" enctype="multipart/form-data" >
 
     <div class="form-group">
         <label for="">Pseudo/ username : </label>
@@ -106,12 +116,15 @@ if(!empty($_POST))
         <input type="password" name="password_confirm" class="form-control" />
     </div>
 
+    <form action="fileUpload.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleFormControlFile1">Avatar : </label>
-            <input type="file" name="avatar"   class="form-control" >
+            <input type="file" name="avatar"   class="form-control" ><br>
+            <input type="submit" name="submit" value="Upload the file" class="btn btn-primary">
         </div>
+    </form >
 
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Register your account</button>
 
 </form>
 

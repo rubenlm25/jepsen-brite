@@ -56,10 +56,10 @@
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
+                <a class="nav-link" href="." tabindex="-1" aria-disabled="true" >Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Profile</a>
+                <a class="nav-link" href="../profile.php" tabindex="-1" aria-disabled="true">Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign out</a>
