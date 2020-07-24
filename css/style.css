@@ -1,0 +1,10 @@
+.size {
+    height: 150px;
+    width: 250px;
+    background-color: red;
+    margin-left: 200px;
+}
+
+.container{
+    margin-left: 100px;
+}
