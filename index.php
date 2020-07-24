@@ -4,33 +4,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/scss/index_style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 		<title>
 			Homepage
 		</title>
 	</head>
 	
 	<body>
-		<?php
-			try
-			{
-				$database = new PDO('mysql:host=localhost;dbname=jepsen-brite;charset=utf8', 'root', '');
-			}
-			catch (Exception $e)
-			{
-				die('Erreur : ' . $e -> getMessage());
-			}
-
-			$response = $database -> query('SELECT * FROM users');
-
-			while ($data = $response -> fetch())
-			{
-				echo $data['nickname'];
-			}
-
-			$response -> closeCursor();
-		?>
-		
-		
 		<header>
 			<nav>
 				<ul>
@@ -63,40 +44,10 @@
 			<h2>
 				Upcoming events
 			</h2>
-			
-			
-			<!-- Template qui sera utilisé par PHP pour générer les events -->
-			<template>
-				<div>
-					<!-- Image de l'event -->
-					<figure>
-						<img src="" alt="">
-					</figure>
-
-					<!-- Titre de l'event -->
-					<h3>
-						<?php
-							// echo $data['nickname'];
-						?>
-					</h3>
-
-					<!-- Date et heure de l'event -->
-					<ul>
-						<li>
-						</li>
-						<li>
-						</li>
-					</ul>
-
-					<!-- Bouton qui envoie sur la page event pour le voir en détail -->
-					<button>
-					</button>
-				</div>
-			</template>
+		
+			<?php
+				include('assets/php/index_php_code.php');
+			?>
 		</main>
-
-		<?php
-			// $reponse -> closeCursor();
-		?>
 	</body>
 </html>
