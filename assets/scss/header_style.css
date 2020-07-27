@@ -32,21 +32,25 @@ header nav ul {
 }
 
 header nav ul li {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 header nav ul li h1 {
   font-size: 200%;
-  margin: inherit;
-  color: red;
+  margin: 0;
 }
 
-header nav ul li a {
+header nav ul li h1 a.link_title {
+  color: red;
+  text-decoration: none;
+}
+
+header nav ul li a.links_menu {
   color: black;
   text-decoration: none;
 }
 
-header nav ul li a:hover {
+header nav ul li a.links_menu:hover {
   color: red;
 }
-/*# sourceMappingURL=index_header_part_style.css.map */
+/*# sourceMappingURL=header_style.css.map */

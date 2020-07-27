@@ -31,23 +31,29 @@ header
 
 			li
 			{
-				font-family: 'Comfortaa', cursive;
+				font-family: "Comfortaa", cursive;
 
 
 				h1
 				{
 					font-size: 200%;
-					margin: inherit;
-					color: rgb(255, 0, 0);
+					margin: 0;
+
+
+					a.link_title
+					{
+						color: rgb(255, 0, 0);
+						text-decoration: none;
+					}
 				}
 
-				a
+				a.links_menu
 				{
 					color: rgb(0, 0, 0);
 					text-decoration: none;
 				}
 
-				a:hover
+				a.links_menu:hover
 				{
 					color: rgb(255, 0, 0);
 				}
