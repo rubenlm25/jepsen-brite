@@ -17,12 +17,14 @@
 	// Request from database and sort by date and time from closest to farthest
 	$response = $database -> query(
 		'SELECT
-			id, title, date, time, image
+			id, title, date_time, image
 		FROM
 			event
 		ORDER BY
-			date, time ASC'
+			date_time ASC'
 	);
+
+	$current_date_time = new DateTime();
 
 	$count = 0;
 	$first_card_classes =
@@ -47,61 +49,74 @@
 	// Loop on all elements from the table event
 	while ($data = $response -> fetch())
 	{
-		if ($count === 0)
-		{
-			echo
-				"<div class='".$first_card_classes[0]."'>
-					<!-- Event picture -->
-					<figure class='".$first_card_classes[1]."'>
-						<img src='".$data['image']."' alt='Logo'>
-					</figure>
-	
-					<div class='".$first_card_classes[2]."'>
-						<!-- Event title -->
-						<h3 class='".$first_card_classes[3]."'>".$data['title']."</h3>
-	
-						<!-- Event date and hour -->
-						<ul class='".$first_card_classes[4]."'>
-							<li>".date('l, d.m.Y', strtotime($data['date']))."</li>
-							<li>".date('H:i', strtotime($data['time']))."</li>
-						</ul>
-	
-						<!-- Button that sends on the event page to see a detailed version -->
-						<button type='button' name='see_event' class='".$first_card_classes[5]."'>
-							See Event
-						</button>
-					</div>
-				</div>"
-			;
-			$count++;
-		}
+		$events_data =
+		[
+			$data['id'],
+			$data['title'],
+			$data['date_time'],
+			$data['image']
+		];
 		
-		else
+		$event_date_time = DateTime::createFromFormat('Y-m-d H:i:s', $events_data[2]);
+
+		// Checks if date is yet to come
+		if ($event_date_time > $current_date_time)
 		{
-			echo
-				"<div class='".$rest_of_cards_classes[0]."'>
-					<!-- Event picture -->
-					<figure class='".$rest_of_cards_classes[1]."'>
-						<img src='".$data['image']."' alt='Logo'>
-					</figure>
+			// Applies special CSS classes for the first element of the list
+			if ($count === 0)
+			{
+				echo
+					"<div class='".$first_card_classes[0]."'>
+						<!-- Event picture -->
+						<figure class='".$first_card_classes[1]."'>
+							<img src='".$events_data[3]."' alt='Logo'>
+						</figure>
+	
+						<div class='".$first_card_classes[2]."'>
+							<!-- Event title -->
+							<h3 class='".$first_card_classes[3]."'>".$events_data[1]."</h3>
+	
+							<!-- Event date and hour -->
+							<ul class='".$first_card_classes[4]."'>
+								<li>".$event_date_time -> format('l, d F Y - H:i')."</li>
+							</ul>
+	
+							<!-- Button that sends on the event page to see a detailed version -->
+							<button type='button' name='see_event' class='".$first_card_classes[5]."'>
+								See Event
+							</button>
+						</div>
+					</div>"
+				;
+				$count++;
+			}
+			// Applies the default CSS classes for the rest of the elements of the list
+			else
+			{
+				echo
+					"<div class='".$rest_of_cards_classes[0]."'>
+						<!-- Event picture -->
+						<figure class='".$rest_of_cards_classes[1]."'>
+							<img src='".$events_data[3]."' alt='Logo'>
+						</figure>
 
-					<div class='".$rest_of_cards_classes[2]."'>
-						<!-- Event title -->
-						<h3 class='".$rest_of_cards_classes[3]."'>".$data['title']."</h3>
+						<div class='".$rest_of_cards_classes[2]."'>
+							<!-- Event title -->
+							<h3 class='".$rest_of_cards_classes[3]."'>".$events_data[1]."</h3>
 
-						<!-- Event date and hour -->
-						<ul class='".$rest_of_cards_classes[4]."'>
-							<li>".date('l, d.m.Y', strtotime($data['date']))."</li>
-							<li>".date('H:i', strtotime($data['time']))."</li>
-						</ul>
+							<!-- Event date and hour -->
+							<ul class='".$rest_of_cards_classes[4]."'>
+								<li>".$event_date_time -> format('l, d F Y - H:i')."</li>
+							</ul>
 
-						<!-- Button that sends on the event page to see a detailed version -->
-						<button type='button' name='see_event' class='".$rest_of_cards_classes[5]."'>
-							See Event
-						</button>
-					</div>
-				</div>"
-			;
+							<!-- Button that sends on the event page to see a detailed version -->
+							<button type='button' name='see_event' class='".$rest_of_cards_classes[5]."'>
+								See Event
+							</button>
+						</div>
+					</div>"
+				;
+			}
 		}
 	}
 
