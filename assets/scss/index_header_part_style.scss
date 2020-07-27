@@ -40,6 +40,17 @@ header
 					margin: inherit;
 					color: rgb(255, 0, 0);
 				}
+
+				a
+				{
+					color: rgb(0, 0, 0);
+					text-decoration: none;
+				}
+
+				a:hover
+				{
+					color: rgb(255, 0, 0);
+				}
 			}
 		}
 	}
