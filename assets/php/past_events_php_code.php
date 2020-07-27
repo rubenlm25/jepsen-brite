@@ -57,7 +57,7 @@
 	
 						<!-- Event date and hour -->
 						<ul class='card_unordered_list'>
-							<li>".$event_date_time -> format('l, d F Y - H:i')."</li>
+							<li>".$event_date_time -> format('l, j F Y - H:i')."</li>
 						</ul>
 	
 						<!-- Button that sends on the event page to see a detailed version -->
