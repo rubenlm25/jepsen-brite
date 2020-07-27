@@ -8,7 +8,7 @@ body main {
 }
 
 body main h2 {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   font-size: 150%;
   text-align: center;
   margin: 115px 0 40px 0;
@@ -46,13 +46,13 @@ body main div.cards_container div.card div.card_data {
 }
 
 body main div.cards_container div.card div.card_data h3.card_title {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   font-size: 125%;
   margin: 0 0 10px 0;
 }
 
 body main div.cards_container div.card div.card_data ul.card_unordered_list {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 90%;
   list-style-type: none;
   margin: 0 0 20px 0;
@@ -65,7 +65,7 @@ body main div.cards_container div.card div.card_data button.card_button {
   height: 35px;
   margin: 0 auto 20px auto;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 85%;
   background-color: red;
   color: white;
