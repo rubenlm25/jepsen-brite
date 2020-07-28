@@ -17,7 +17,7 @@
 	
 	<body>
 		<?php
-			include('header.php');
+			require "header.php";
 		?>
 
 
@@ -28,14 +28,14 @@
 
 			<div class='cards_container'>
 				<?php
-					include('assets/php/past_events_php_code.php');
+					require "assets/php/past_events_php_code.php";
 				?>
 			</div>
 		</main>
 
 
 		<?php
-			include('footer.php');
+			require "footer.php";
 		?>
 	</body>
 </html>
