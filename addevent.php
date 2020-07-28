@@ -1,9 +1,8 @@
 <?php
-	if (isset($_POST['addevent'])){
+	if (isset($_POST['addevent']) ){
 		$title = $_POST["title"];
 		$author = $_POST['author'];
-		$date = $_POST["date"];
-		$time = $_POST['time'];
+		$date_time = $_POST['date_time'];
 		$description = $_POST["description"];
 		$category = $_POST["category"];
 		
@@ -14,30 +13,37 @@
 		
 		$allowed_filetypes = ["jpg", "jpeg", "png", "gif"];
 
+		function send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type)
+		{
+			$bdd = new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+			$request = $bdd -> prepare("INSERT INTO event(title, author, date_time, description, category, image, image_type) VALUES (?, ?, ?, ?, ?, ?, ?)");
+			$request -> execute(array($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type));
+		}
+
 		if ($image_type === $allowed_filetypes[0])
 		{
 			$image_tmp_name = "data:image/jpg;base64," . base64_encode($image_tmp_name);
+			send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type);
 		}
 		else if ($image_type === $allowed_filetypes[1])
 		{
 			$image_tmp_name = "data:image/jpeg;base64," . base64_encode($image_tmp_name);
+			send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type);
 		}
 		else if ($image_type === $allowed_filetypes[2])
 		{
 			$image_tmp_name = "data:image/png;base64," . base64_encode($image_tmp_name);
+			send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type);
 		}
 		else if ($image_type === $allowed_filetypes[3])
 		{
 			$image_tmp_name = "data:image/gif;base64," . base64_encode($image_tmp_name);
+			send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type);
 		}
 		else
 		{
 			echo 'Please enter a picture of ".jpg", ".jpeg", ".png" or ".gif" type.';
 		}
-		
-		$bdd = new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
-		$request = $bdd -> prepare("INSERT INTO event(title, author, date, time, description, category, image, image_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-		$request -> execute(array($title, $author, $date, $time, $description, $category, $image_tmp_name, $image_type));
 	}
 ?>
 
@@ -59,12 +65,8 @@
 					<input type="text" name="author" required>
 				</div>
 				<div>
-					<label for="datehour">Date</label>
-					<input type="date" name="date" required>
-				</div>
-				<div>
-					<label for="time">Time</label>
-					<input type="time" name="time" required>
+					<label for="date_time">Date and time</label>
+					<input type="datetime-local" name="date_time" required>
 				</div>
 				<div>
 					<label for="image">Image</label>
