@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-
-
-
-
-
-
-<!-- verification formulaire -->
-
 <?php
-
 require_once './include/functions.php';
+
 ?>
 <?php
 if(!empty($_POST))
@@ -68,13 +50,13 @@ if(!empty($_POST))
         //require_once './include/bdb.php';
         $requete = $pdo-> prepare("INSERT INTO users SET username = ?, password = ?, email = ?, confirmation_token = ?");
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT );
-         $token = str_random(60);
-         $requete->execute([$_POST['username'], $password, $_POST['email'], $token] );
-       $user_id = $pdo->lastInsertId();
-      //  $email = $_POST['email'];
+        $token = str_random(60);
+        $requete->execute([$_POST['username'], $password, $_POST['email'], $token] );
+        $user_id = $pdo->lastInsertId();
+        $email = $_POST['email'];
         mail($email, 'confirmation de votre compte',"cliquez sur ce lien pour valider\n\nhttp://127.0.0.1/projects/jepsen-brite/confirm.php?id=$user_id&token=$token");
 
-       // die('account created !');
+        // die('account created !');
         header('Location:login.php');
 
         exit();
@@ -102,56 +84,56 @@ if(!empty($_POST))
 
 <?php require './include/header.php' ?>
 <div class="container">
-<head>
-    <h1> Registration</h1>
-</head>
+    <head>
+        <h1> Registration</h1>
+    </head>
 
 
 
-<?php if(!empty($errors)): ?>
-<div class="alert alert-danger">
-    <p>You did not fill the form correctly</p>
-    <?php foreach($errors as $error): ?>
-        <ul>
-            <li><?= $error; ?></li>
-        </ul>
-    <? endforeach; ?>
-</div>
-<?php endif; ?>
+    <?php if(!empty($errors)): ?>
+        <div class="alert alert-danger">
+            <p>You did not fill the form correctly</p>
+            <?php foreach($errors as $error): ?>
+                <ul>
+                    <li><?= $error; ?></li>
+                </ul>
+            <? endforeach; ?>
+        </div>
+    <?php endif; ?>
 
     <form  action="" method="POST" enctype="multipart/form-data"  >
 
-    <div class="form-group">
-        <label for="">Pseudo/ username : </label>
-        <input type="text" name="username" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label for="">Email : </label>
-        <input type="text" name="email" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label for="">Password : </label>
-        <input type="password" name="password" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label for="">confirm Password : </label>
-        <input type="password" name="password_confirm" class="form-control" />
-    </div>
-
-    <!--<form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="exampleFormControlFile1">Avatar : </label>
-            <input type="file" name="avatar"   class=" btn btn-warning" ><br>
+            <label for="">Pseudo/ username : </label>
+            <input type="text" name="username" class="form-control" />
         </div>
-    </form > -->
+
+        <div class="form-group">
+            <label for="">Email : </label>
+            <input type="text" name="email" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="">Password : </label>
+            <input type="password" name="password" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="">confirm Password : </label>
+            <input type="password" name="password_confirm" class="form-control" />
+        </div>
+
+        <!--<form action="" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Avatar : </label>
+                <input type="file" name="avatar"   class=" btn btn-warning" ><br>
+            </div>
+        </form > -->
 
 
         <button type="submit" class="btn btn-primary">Register your account</button>
 
-</form><br><br>
+    </form><br><br>
 
 
 

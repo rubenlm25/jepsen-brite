@@ -1,5 +1,11 @@
-<?php
-require './include/header.php'
+<?php session_start();
+require './include/functions.php'; ?>
+<?php require './include/header.php'; ?>
 
-?>
-<?php echo 'redirection ok';
+<h2> your account</h2>
+
+
+
+<?php debug($_SESSION); ?>
+
+
