@@ -88,7 +88,7 @@
 								</ul>
 	
 								<!-- Button that sends on the event page to see a detailed version -->
-								<button type='button' name='see_event' class='".$first_card_classes[5]."'>
+								<button type='button' name='see_event' title='See the event&#39;s details' class='".$first_card_classes[5]."'>
 									See Event
 								</button>
 							</div>
@@ -116,7 +116,7 @@
 								</ul>
 
 								<!-- Button that sends on the event page to see a detailed version -->
-								<button type='button' name='see_event' class='".$rest_of_cards_classes[5]."'>
+								<button type='button' name='see_event' title='See the event&#39;s details' class='".$rest_of_cards_classes[5]."'>
 									See Event
 								</button>
 							</div>
