@@ -13,6 +13,9 @@
 				<a href="past_events.php" title="See past events" class="links_menu">Past Events</a>
 			</li>
 			<li>
+				<a href="" title="Browse by categories" class="links_menu">Categories</a>
+			</li>
+			<li>
 				<a href="" title="Go to your profile" class="links_menu">Profile</a>
 			</li>
 			<li>
