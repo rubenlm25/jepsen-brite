@@ -28,6 +28,7 @@
 	$current_date_time = new DateTime();
 
 	$count = 0;
+	$events_number = 1;
 	$first_card_classes =
 	[
 		'card_next_event',
@@ -64,60 +65,65 @@
 		// Checks if date is yet to come
 		if ($event_date_time > $current_date_time)
 		{
-			// Applies special CSS classes for the first element of the list
-			if ($count === 0)
+			// Displays maximum 21 events
+			if ($events_number <= 21)
 			{
-				echo
-					"<div class='".$first_card_classes[0]."'>
-						<!-- Event picture -->
-						<figure class='".$first_card_classes[1]."'>
-							<img src='".$events_data[3]."' alt='Logo'>
-						</figure>
+				// Applies special CSS classes for the first element of the list
+				if ($count === 0)
+				{
+					echo
+						"<div class='".$first_card_classes[0]."'>
+							<!-- Event picture -->
+							<figure class='".$first_card_classes[1]."'>
+								<img src='".$events_data[3]."' alt='Logo'>
+							</figure>
 	
-						<div class='".$first_card_classes[2]."'>
-							<!-- Event title -->
-							<h3 class='".$first_card_classes[3]."'>".$events_data[1]."</h3>
+							<div class='".$first_card_classes[2]."'>
+								<!-- Event title -->
+								<h3 class='".$first_card_classes[3]."'>".$events_data[1]."</h3>
 	
-							<!-- Event date and hour -->
-							<ul class='".$first_card_classes[4]."'>
-								<li>".$event_date_time -> format('l, d F Y - H:i')."</li>
-							</ul>
+								<!-- Event date and hour -->
+								<ul class='".$first_card_classes[4]."'>
+									<li>".$event_date_time -> format('l, d F Y - H:i')."</li>
+								</ul>
 	
-							<!-- Button that sends on the event page to see a detailed version -->
-							<button type='button' name='see_event' class='".$first_card_classes[5]."'>
-								See Event
-							</button>
-						</div>
-					</div>"
-				;
-				$count++;
-			}
-			// Applies the default CSS for the rest of the elements of the list
-			else
-			{
-				echo
-					"<div class='".$rest_of_cards_classes[0]."'>
-						<!-- Event picture -->
-						<figure class='".$rest_of_cards_classes[1]."'>
-							<img src='".$events_data[3]."' alt='Logo'>
-						</figure>
+								<!-- Button that sends on the event page to see a detailed version -->
+								<button type='button' name='see_event' class='".$first_card_classes[5]."'>
+									See Event
+								</button>
+							</div>
+						</div>"
+					;
+					$count++;
+				}
+				// Applies the default CSS for the rest of the elements of the list
+				else
+				{
+					echo
+						"<div class='".$rest_of_cards_classes[0]."'>
+							<!-- Event picture -->
+							<figure class='".$rest_of_cards_classes[1]."'>
+								<img src='".$events_data[3]."' alt='Logo'>
+							</figure>
 
-						<div class='".$rest_of_cards_classes[2]."'>
-							<!-- Event title -->
-							<h3 class='".$rest_of_cards_classes[3]."'>".$events_data[1]."</h3>
+							<div class='".$rest_of_cards_classes[2]."'>
+								<!-- Event title -->
+								<h3 class='".$rest_of_cards_classes[3]."'>".$events_data[1]."</h3>
 
-							<!-- Event date and hour -->
-							<ul class='".$rest_of_cards_classes[4]."'>
-								<li>".$event_date_time -> format('l, j F Y - H:i')."</li>
-							</ul>
+								<!-- Event date and hour -->
+								<ul class='".$rest_of_cards_classes[4]."'>
+									<li>".$event_date_time -> format('l, j F Y - H:i')."</li>
+								</ul>
 
-							<!-- Button that sends on the event page to see a detailed version -->
-							<button type='button' name='see_event' class='".$rest_of_cards_classes[5]."'>
-								See Event
-							</button>
-						</div>
-					</div>"
-				;
+								<!-- Button that sends on the event page to see a detailed version -->
+								<button type='button' name='see_event' class='".$rest_of_cards_classes[5]."'>
+									See Event
+								</button>
+							</div>
+						</div>"
+					;
+				}
+				$events_number++;
 			}
 		}
 	}

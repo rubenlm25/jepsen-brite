@@ -25,7 +25,7 @@
 			<h2>
 				Upcoming Events
 			</h2>
-		
+
 			<div class='cards_container'>
 				<?php
 					include('assets/php/index_php_code.php');
