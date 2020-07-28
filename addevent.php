@@ -1,5 +1,6 @@
 <?php
-	if (isset($_POST['addevent']) ){
+	if (isset($_POST['addevent']) )
+	{
 		$title = $_POST["title"];
 		$author = $_POST['author'];
 		$date_time = $_POST['date_time'];
