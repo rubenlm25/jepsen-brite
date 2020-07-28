@@ -66,7 +66,7 @@ if(session_status() == PHP_SESSION_NONE){
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Profile</a>
+                <a class="nav-link" href="account.php" tabindex="-1" aria-disabled="true">Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Create Events</a>
@@ -78,8 +78,14 @@ if(session_status() == PHP_SESSION_NONE){
                 <a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true">Log In</a>
+                <a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true">Sign In</a>
             </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Past Events</a>
+                </li>
 
             <?php endif; ?>
         </ul>

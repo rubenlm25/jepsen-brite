@@ -1,8 +1,16 @@
 <?php session_start();
 require './include/functions.php'; ?>
+
+<?php
+logged_only();
+
+?>
+
+
+
 <?php require './include/header.php'; ?>
 
-    <h2> your account</h2>
+    <h2> My account</h2>
 
 
 

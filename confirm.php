@@ -17,7 +17,7 @@ if($user && $user->confirmation_token == $token ){
     // et on vide le champ confirm_token
     $requete=$pdo->prepare('UPDATE users SET confirmation_token = NULL, confirmed_at = NOW() WHERE id = ?');
     $requete->execute([$user_id]);
-    $_SESSION['flash']['success'] ="your account is successfully validate";
+    $_SESSION['flash']['success'] ="your account is successfully created !";
     $_SESSION['auth'] = $user;
     header('Location:account.php');
 
