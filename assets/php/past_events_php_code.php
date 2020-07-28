@@ -63,7 +63,7 @@
 						</ul>
 	
 						<!-- Button that sends on the event page to see a detailed version -->
-						<button type='button' name='see_event' class='card_button'>
+						<button type='button' name='see_event' title='See the event&#39;s details' class='card_button'>
 							See Event
 						</button>
 					</div>
