@@ -1,6 +1,6 @@
 <?php
 require_once './include/functions.php';
-
+session_start();
 ?>
 <?php
 if(!empty($_POST))
@@ -55,7 +55,7 @@ if(!empty($_POST))
         $user_id = $pdo->lastInsertId();
         $email = $_POST['email'];
         mail($email, 'confirmation de votre compte',"cliquez sur ce lien pour valider\n\nhttp://127.0.0.1/projects/jepsen-brite/confirm.php?id=$user_id&token=$token");
-
+        $_SESSION['flash']['success'] = "a validation account email has been sent to you";
         // die('account created !');
         header('Location:login.php');
 

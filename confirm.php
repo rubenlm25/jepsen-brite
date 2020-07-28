@@ -17,13 +17,14 @@ if($user && $user->confirmation_token == $token ){
     // et on vide le champ confirm_token
     $requete=$pdo->prepare('UPDATE users SET confirmation_token = NULL, confirmed_at = NOW() WHERE id = ?');
     $requete->execute([$user_id]);
-    // die('account validated');
+    $_SESSION['flash']['success'] ="your account is successfully validate";
     $_SESSION['auth'] = $user;
     header('Location:account.php');
 
 
 }else{
-    $_SESSION['flash']['danger'] = "ce token plus valide";
+    $_SESSION['flash']['danger'] = "This token is no more valid";
+
     header('Location: login.php');
 }
 

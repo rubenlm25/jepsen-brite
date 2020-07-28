@@ -1,8 +1,8 @@
-<?php session_start();
+<?php
 require './include/functions.php'; ?>
 <?php require './include/header.php'; ?>
 
-<h2> your account</h2>
+<h2> login</h2>
 
 
 

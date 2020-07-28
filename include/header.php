@@ -1,3 +1,8 @@
+<?php
+if(session_status() == PHP_SESSION_NONE){
+    session_start();
+}
+        ?>
 <!doctype html>
 <body lang="en">
 <head>
@@ -48,6 +53,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
+            <?php if (isset($_SESSION['auth'])); ?>
+
+            <?php else: ?>
             <li class="nav-item active">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
             </li>
@@ -55,16 +63,35 @@
                 <a class="nav-link" href="." tabindex="-1" aria-disabled="true" >Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../profile.php" tabindex="-1" aria-disabled="true">Profile</a>
+                <a class="nav-link" href="../profile.php" tabindex="-1" aria-disabled="true">Past Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign out</a>
+                <a class="nav-link" href="../profile.php" tabindex="-1" aria-disabled="true">Create Events</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Profile</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+            </li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>
 <div class="container">
-    fghryfhgtfg
+
+    <?php if (isset($_SESSION['flash'])): ?>
+    <?php foreach($_SESSION['flash'] as $type => $message): ?>
+
+    <div class="alert alert-<?= $type; ?>">
+        <?= $message; ?>
+    </div>
+    <?php endforeach; ?>
+        <?php unset($_SESSION['flash']); ?>
+    <?php endif; ?>
+
+
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script></body>
