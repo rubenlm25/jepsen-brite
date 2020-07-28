@@ -53,28 +53,34 @@ if(session_status() == PHP_SESSION_NONE){
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <?php if (isset($_SESSION['auth'])); ?>
+            <?php if (isset($_SESSION['auth'])): ?>
 
-            <?php else: ?>
-            <li class="nav-item active">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="log_out.php" tabindex="-1" aria-disabled="true" >Log Out</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="." tabindex="-1" aria-disabled="true" >Event</a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../profile.php" tabindex="-1" aria-disabled="true">Past Events</a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Past Events</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../profile.php" tabindex="-1" aria-disabled="true">Create Events</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Profile</a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Create Events</a>
             </li>
+
+            <?php else: ?>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true">Log In</a>
+            </li>
+
             <?php endif; ?>
         </ul>
     </div>
