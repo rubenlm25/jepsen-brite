@@ -24,6 +24,7 @@
 			date_time DESC'
 	);
 
+	// Get the date and time of the day
 	$current_date_time = new DateTime();
 
 	$count = 0;
@@ -39,6 +40,7 @@
 			$data['image']
 		];
 		
+		// Format the date and time object
 		$event_date_time = DateTime::createFromFormat('Y-m-d H:i:s', $events_data[2]);
 
 		// Checks if date is yet to come

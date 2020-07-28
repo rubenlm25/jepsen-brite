@@ -24,6 +24,7 @@
 			date_time ASC'
 	);
 
+	// Get the date and time of the day
 	$current_date_time = new DateTime();
 
 	$count = 0;
@@ -57,6 +58,7 @@
 			$data['image']
 		];
 		
+		// Format the DateTime object
 		$event_date_time = DateTime::createFromFormat('Y-m-d H:i:s', $events_data[2]);
 
 		// Checks if date is yet to come
@@ -90,7 +92,7 @@
 				;
 				$count++;
 			}
-			// Applies the default CSS classes for the rest of the elements of the list
+			// Applies the default CSS for the rest of the elements of the list
 			else
 			{
 				echo
