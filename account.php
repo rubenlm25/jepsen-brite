@@ -12,6 +12,8 @@ logged_only();
 
     <h2> My account</h2>
 
+<h4>HELLO ! <?= $_SESSION['auth']->username;?></h4>
+
 
 
 <?php debug($_SESSION); ?>
