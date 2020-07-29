@@ -1,19 +1,25 @@
 <?php session_start();
-require './include/functions.php'; ?>
+require './include/functions.php';
+require_once './include/bdb.php';
 
-<?php
+require './include/header.php';
+
+
 logged_only();
+
+
+
+
+    debug($_SESSION);
 
 ?>
 
-
-
-<?php require './include/header.php'; ?>
-
-    <h2> My account</h2>
-
-<h4>HELLO ! <?= $_SESSION['auth']->username;?></h4>
+<h2>bonjour</h2>
+<h3>pseudo:  <?= $_SESSION['auth']->username; ?></h3>
 
 
 
-<?php debug($_SESSION); ?>
+
+
+
+

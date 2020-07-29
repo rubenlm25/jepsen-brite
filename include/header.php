@@ -25,7 +25,9 @@ if(session_status() == PHP_SESSION_NONE){
     <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/app.css">
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -71,6 +73,7 @@ if(session_status() == PHP_SESSION_NONE){
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Create Events</a>
             </li>
+
 
             <?php else: ?>
 
