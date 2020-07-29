@@ -1,0 +1,51 @@
+footer
+{
+	position: relative;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	background-color: rgb(255, 0, 0);
+	color: rgb(255, 255, 255);
+
+
+	h2
+	{
+		font-family: "Comfortaa", cursive;
+		font-size: 120%;
+		margin: 0;
+	}
+
+	figure
+	{
+		position: absolute;
+		top: 50px;
+		right: 40px;
+		width: 50px;
+		height: 50px;
+		margin: 0;
+		background-color: rgb(255, 255, 255);
+		border-radius: 50px;
+
+
+		a
+		{
+			display: block;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			border-radius: 50px;
+
+
+			img
+			{
+				width: 40px;
+				height: 50px;
+			}
+		}
+	}
+
+	figure:hover
+	{
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
+}
