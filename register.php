@@ -123,12 +123,12 @@ if(!empty($_POST))
             <input type="password" name="password_confirm" class="form-control" />
         </div>
 
-        <!--<form action="" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="exampleFormControlFile1">Avatar : </label>
+                <label for="exampleFormControlFile1"> Choose your Avatar : </label>
                 <input type="file" name="avatar"   class=" btn btn-warning" ><br>
-            </div>
-        </form > -->
+        </form >
+
 
 
         <button type="submit" class="btn btn-primary">Register your account</button>
@@ -142,6 +142,6 @@ if(!empty($_POST))
 </div>
 
 
-<?php require 'include/footer.php' ?>
+
 </body>
 </html>
