@@ -56,7 +56,7 @@ if(session_status() == PHP_SESSION_NONE){
             <?php if (isset($_SESSION['auth'])): ?>
 
             <li class="nav-item">
-                <a class="nav-link" href="log_out.php" tabindex="-1" aria-disabled="true" >Log Out</a>
+                <a class="nav-link" href="https://still-island-51569.herokuapp.com/log_out.php" tabindex="-1" aria-disabled="true" >Log Out</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
@@ -66,7 +66,7 @@ if(session_status() == PHP_SESSION_NONE){
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="account.php" tabindex="-1" aria-disabled="true">Profile</a>
+                <a class="nav-link" href="https://still-island-51569.herokuapp.com/account.php" tabindex="-1" aria-disabled="true">Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Create Events</a>
@@ -75,10 +75,10 @@ if(session_status() == PHP_SESSION_NONE){
             <?php else: ?>
 
             <li class="nav-item active">
-                <a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="https://still-island-51569.herokuapp.com/register.php" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true">Sign In</a>
+                <a class="nav-link" href="https://still-island-51569.herokuapp.com/login.php" tabindex="-1" aria-disabled="true">Sign In</a>
             </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
