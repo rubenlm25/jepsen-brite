@@ -7,7 +7,8 @@
         <main>
             <?php
                 $id = $_GET["id"];
-                $bdd = new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
+                $bdd = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+                // ("mysql:host=localhost;dbname=jepsen-brite","root","root");
                 $request = $bdd ->prepare("SELECT * FROM event where id=?");
                 $request ->execute(array($id));
                 $data = $request->fetch();
