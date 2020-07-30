@@ -76,7 +76,7 @@
 								</ul>
 	
 								<!-- Button that sends on the event page to see a detailed version -->
-								<button type='button' name='see_event' title='See the event&#39;s details' class='".$first_card_classes[5]."'>
+								<a href='eventpage.php'><button type='submit' name='see_event' title='See the event&#39;s details' class='".$first_card_classes[5]."'></a>
 									See Event
 								</button>
 							</div>
