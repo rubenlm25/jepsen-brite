@@ -51,9 +51,9 @@
 						</ul>
 	
 						<!-- Button that sends on the event page to see a detailed version -->
-						<button type='button' name='see_event' title='See the event&#39;s details' class='card_button'>
+						<a href='eventpage.php?id=".$data['id']."' title='See the event&#39;s details' class='card_button'>
 							See Event
-						</button>
+						</a>
 					</div>
 				</div>"
 			;

@@ -24,8 +24,8 @@
             if (isset($_POST["submit"])){
                 $choice = $_POST["category"];
                 $bdd =
-                    // new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-                    new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+                    new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+                    // new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
                 $request =$bdd->prepare("SELECT * FROM event WHERE category = ? ");
                 $request ->execute(array($choice));
                 while($data = $request->fetch()){

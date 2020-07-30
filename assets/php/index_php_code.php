@@ -114,6 +114,3 @@
 
 	$response -> closeCursor();
 ?>
-
-
-<!-- <button type='button' name='see_event'  > -->

@@ -1,12 +1,22 @@
 <?php
-	session_start();
-
 	require "include/functions.php";
 	require_once "include/bdb.php";
 	require "include/header.php";
 
 	logged_only();
-	if ()
+
+	$usersession = $_SESSION["auth"] -> username;
+	$id = $_GET["id"];
+	$bdd =
+			// new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+			new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+	
+	$request = $bdd -> prepare("SELECT author FROM event WHERE id=?");
+	$request -> execute(array($id));
+	$test = $request->fetch();
+	if ($usersession === $test["author"]){
+
+
 	if (isset($_POST["editevent"]))	{
 		$id = $_POST["id"];
 		$title = $_POST["title"];
@@ -14,9 +24,7 @@
 		$description = $_POST["description"];
 		$category = $_POST["category"];
 		$image = $_FILES['image']['name'];
-		$bdd =
-			// new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-			new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+		
 		
 		if(empty($image)){
 			$request = $bdd -> prepare("UPDATE event SET title=?,date_time=?,description=?,category=? WHERE id=?");
@@ -47,20 +55,19 @@
 
 		header("location:eventpage.php?id=".$id);
 	}
-?>
-<html>
-<head>
-	<meta charset="utf-8" />
+echo "<html>
+		<head>
+	<meta charset='utf-8' />
 	<title>edit event</title>
 </head>
 <body>
 <main>
-	<h1>Edit Event</h1>
-	<?php
+	<h1>Edit Event</h1>";
+
 	$id = $_GET["id"];
 	$bdd =
-		// new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-		new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+		new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+		// new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
 	$request = $bdd ->prepare("SELECT * FROM event where id=?");
 	$request ->execute(array($id));
 	$data = $request->fetch();
@@ -129,12 +136,26 @@
 			</select>
 		</div>";
 		}
-	?>
-		<button type="submit" name="editevent">Edit Event</button>
+		echo "
+		<button type='submit' name='editevent'>Edit Event</button>
 	</form>
 
 
 
 </main>
 </body>
+</html>";
+	}
+	else{
+		echo "<html>
+		<head>
+	<meta charset='utf-8' />
+	<title>edit event</title>
+</head>
+<body>
+<h1>You don't have permission to edit this event as you are not the author.</h1>
+</body>
 </html>
+";
+	}
+?>

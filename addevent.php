@@ -1,7 +1,12 @@
 <?php
+
+require './include/functions.php';
+require_once './include/bdb.php';
+require './include/header.php';
+logged_only();
 if (isset($_POST['addevent']) ){
     $title = $_POST["title"];
-    $author = $_POST['author'];
+    $author = $_SESSION["auth"] -> username;;
     $date_time = $_POST['date_time'];
     $description = $_POST["description"];
     $category = $_POST["category"];
@@ -16,8 +21,8 @@ if (isset($_POST['addevent']) ){
     function send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type)
     {
         $bdd =
-            // new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-            new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+            new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+            // new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
         $request = $bdd -> prepare("INSERT INTO event(title, author, date_time, description, category, image, image_type) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $request -> execute(array($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type));
         $lastid = $bdd ->lastInsertId();
@@ -63,10 +68,6 @@ if (isset($_POST['addevent']) ){
         <div>
             <label for="title">Title</label>
             <input type="text" name="title" required>
-        </div>
-        <div>
-            <label for="title">Author</label>
-            <input type="text" name="author" required>
         </div>
         <div>
             <label for="date_time">Date and Time</label>
