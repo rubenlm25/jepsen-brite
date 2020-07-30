@@ -17,7 +17,7 @@
 	
 	<body>
 		<?php
-			require "header.php";
+			require "include/header.php";
 		?>
 
 
