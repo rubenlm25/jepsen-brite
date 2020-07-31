@@ -32,7 +32,7 @@
                         echo "<a href='editevent.php?id=".$data["id"]."'>edit </a>";
                     }
 		if(isset($_SESSION["auth"])){
-                        echo "<form action='comment-post.php?id=".$id."' method='post'>
+                        echo "<form action='commentpost.php?id=".$id."' method='post'>
                                 <textarea name='comment' cols='50'>write a comment</textarea>
                                 <input type='submit' value='send'>
                               </form>";
