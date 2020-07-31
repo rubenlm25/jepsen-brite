@@ -1,4 +1,5 @@
 <?php
+if(isset($_POST['addcomment']))
     $id =$_GET["id"];
     $message=$_POST["comment"];
     $author=$_SESSION["auth"]->username;
@@ -45,7 +46,7 @@ header("location=eventpage.php?id=".$id);
 		if(isset($_SESSION["auth"])){
                         echo "<form action='eventpage.php?id=".$id."' method='post'>
                                 <textarea name='comment' cols='50'>write a comment</textarea>
-                                <input type='submit' value='send'>
+                                <input type='submit' value='send' name='addcomment'>
                               </form>";
                     }
                     $displaycomment=$bdd->prepare("SELECT * FROM comment WHERE id_event=? ORDER BY date_time");
