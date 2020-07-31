@@ -143,6 +143,6 @@ if(!empty($_POST))
 </div>
 
 
-<?php require 'include/footer.php' ?>
+
 </body>
 </html>
