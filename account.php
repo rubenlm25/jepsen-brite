@@ -30,13 +30,5 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
 </div>
 
 </div><br><br>
-<div class = "container">
-    <form action="" method="POST" enctype="multipart/form-data" class="form-group">
-
-        <label for="exampleFormControlFile1"> Choose your Avatar : </label>
-        <input type="file" name="avatar"   class=" btn btn-warning" ><br><br></>
-    <input type="submit" value="register your avatar" name="submit" class="btn btn-primary"></>
-</form >
-</div>
 
 <img src=" <?= $_SESSION['auth']->avatar; ?>"</img>
