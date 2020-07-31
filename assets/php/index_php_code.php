@@ -60,7 +60,7 @@
 				if ($count === 0)
 				{
 					echo
-						"<div class='".$first_card_classes[0]."'>
+						"<div class='".$first_card_classes[0]." bg-dark'>
 							<!-- Event picture -->
 							<figure class='".$first_card_classes[1]."'>
 								<img src='".$events_data[3]."' alt='Logo'>
@@ -68,7 +68,7 @@
 	
 							<div class='".$first_card_classes[2]."'>
 								<!-- Event title -->
-								<h3 class='".$first_card_classes[3]."'>".$events_data[1]."</h3>
+								<h3 class='".$first_card_classes[3]." text-white'>".$events_data[1]."</h3>
 	
 								<!-- Event date and hour -->
 								<ul class='".$first_card_classes[4]."'>
@@ -76,7 +76,7 @@
 								</ul>
 	
 								<!-- Button that sends on the event page to see a detailed version -->
-								<a href='eventpage.php?id=".$data['id']."' class='".$first_card_classes[5]."' title='See the event&#39;s details'>See event</a>
+								<a href='eventpage.php?id=".$data['id']."' class='".$first_card_classes[5]." text-white' title='See the event&#39;s details'>See event</a>
 							</div>
 						</div>"
 					;
@@ -102,7 +102,7 @@
 								</ul>
 
 								<!-- Button that sends on the event page to see a detailed version -->
-								<a href='eventpage.php?id=".$data['id']."' title='See the event&#39;s details' class='".$rest_of_cards_classes[5]."'>See event</a>
+								<a href='eventpage.php?id=".$data['id']." ' title='See the event&#39;s details' class='".$rest_of_cards_classes[5]." text-dark'>See event</a>
 							</div>
 						</div>"
 					;

@@ -23,7 +23,7 @@ body main div.cards_container {
 
 body main div.cards_container div.card_next_event {
   margin: 0 0 20px 0;
-  background-color: red;
+  background-color: #444444;
   color: white;
 }
 
@@ -51,6 +51,7 @@ body main div.cards_container div.card_next_event div.card_next_event_data h3.ca
   font-family: "Comfortaa", cursive;
   font-size: 125%;
   margin: 0 0 10px 0;
+  color: white;
 }
 
 body main div.cards_container div.card_next_event div.card_next_event_data ul.card_next_event_unordered_list {
