@@ -6,6 +6,7 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
     $requete = $pdo->prepare('SELECT * FROM users WHERE (username = :username OR email = :username ) AND confirmed_at IS NOT NULL');
     $requete->execute(['username' => $_POST['username']]);
         $user = $requete->fetch();
+    debug($_SESSION);
 
        // debug (password_verify ($_POST['password'], $user->password));
         if(password_verify($_POST['password'], $user->password)){
@@ -13,12 +14,13 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
             $_SESSION['auth'] = $user;
             $_SESSION['flash']['success'] = "Congratulation you are connected! to Jepsen-Brite";
             header('Location: account.php');
+            debug($_SESSION);
             exit();
 
         }else{
             $_SESSION['flash']['danger'] = "Incorrect username or password !";
         }
-    debug($_SESSION);
+
 }
 
 ?>

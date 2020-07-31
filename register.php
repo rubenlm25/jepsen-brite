@@ -57,7 +57,7 @@ if(!empty($_POST))
         mail($email, 'confirmation de votre compte',"cliquez sur ce lien pour valider\n\nhttp://127.0.0.1/projects/jepsen-brite/confirm.php?id=$user_id&token=$token");
         $_SESSION['flash']['success'] = "You receive an email: Please enter your validation token to register your account";
         // die('account created !');
-        header('Location:login.php');
+        header('Location:confirm.php?id='.$user_id.'&token='.$token);
 
         exit();
 
@@ -123,11 +123,7 @@ if(!empty($_POST))
             <input type="password" name="password_confirm" class="form-control" />
         </div>
 
-        <form action="" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="exampleFormControlFile1"> Choose your Avatar : </label>
-                <input type="file" name="avatar"   class=" btn btn-warning" ><br>
-        </form >
+
 
 
 
