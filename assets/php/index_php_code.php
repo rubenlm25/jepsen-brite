@@ -76,9 +76,7 @@
 								</ul>
 	
 								<!-- Button that sends on the event page to see a detailed version -->
-								<button type='button' name='see_event' title='See the event&#39;s details' class='".$first_card_classes[5]."'>
-									See Event
-								</button>
+								<a href='eventpage.php?id=".$data['id']."' class='".$first_card_classes[5]."' title='See the event&#39;s details'>See event</a>
 							</div>
 						</div>"
 					;
@@ -104,9 +102,7 @@
 								</ul>
 
 								<!-- Button that sends on the event page to see a detailed version -->
-								<button type='button' name='see_event' title='See the event&#39;s details' class='".$rest_of_cards_classes[5]."'>
-									See Event
-								</button>
+								<a href='eventpage.php?id=".$data['id']."' title='See the event&#39;s details' class='".$rest_of_cards_classes[5]."'>See event</a>
 							</div>
 						</div>"
 					;

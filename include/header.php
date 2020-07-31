@@ -47,7 +47,7 @@ if(session_status() == PHP_SESSION_NONE){
 
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-    <a class="navbar-brand" href="#">jepsen-brite</a>
+    <a class="navbar-brand" href="index.php">jepsen-brite</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,35 +56,35 @@ if(session_status() == PHP_SESSION_NONE){
             <?php if (isset($_SESSION['auth'])): ?>
 
             <li class="nav-item">
-                <a class="nav-link" href="https://still-island-51569.herokuapp.com/log_out.php" tabindex="-1" aria-disabled="true" >Log Out</a>
+                <a class="nav-link" href="log_out.php" tabindex="-1" aria-disabled="true" >Log Out</a>
             </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="" tabindex="-1" aria-disabled="true" >Event</a>
+            </li> -->
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Past Events</a>
+                <a class="nav-link" href="past_events.php" tabindex="-1" aria-disabled="true">Past Events</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="https://still-island-51569.herokuapp.com/account.php" tabindex="-1" aria-disabled="true">Profile</a>
+                <a class="nav-link" href="account.php" tabindex="-1" aria-disabled="true">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Create Events</a>
+                <a class="nav-link" href="addevent.php" tabindex="-1" aria-disabled="true">Create Events</a>
             </li>
 
             <?php else: ?>
 
             <li class="nav-item active">
-                <a class="nav-link" href="https://still-island-51569.herokuapp.com/register.php" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true">Sign UP <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://still-island-51569.herokuapp.com/login.php" tabindex="-1" aria-disabled="true">Sign In</a>
+                <a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true">Sign In</a>
             </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" >Event</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Past Events</a>
+                    <a class="nav-link" href="past_events.php" tabindex="-1" aria-disabled="true">Past Events</a>
                 </li>
 
             <?php endif; ?>
