@@ -57,7 +57,8 @@ if(!empty($_POST))
         mail($email, 'confirmation de votre compte',"cliquez sur ce lien pour valider\n\nhttps://still-island-51569.herokuapp.com/confirm.php?id=$user_id&token=$token");
         $_SESSION['flash']['success'] = "You receive an email: Please enter your validation token to register your account";
         // die('account created !');
-        header('Location:login.php');
+
+        header('Location:confirm.php?id='.$user_id.'&token='.$token);
 
         exit();
 
