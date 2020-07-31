@@ -5,11 +5,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/scss/footer_style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 	</head>
 	
 	<body>
-		<footer class="bg-dark">
-			<h2 class="text-white">
+		<footer class="bg-dark" style="">
+			<h2 class="text-white" style="line-height: 150px;">
 				© 2020 Jepsenbrite
 			</h2>
 
