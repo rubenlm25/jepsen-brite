@@ -4,8 +4,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="assets/scss/header_style.css">
-		<link rel="stylesheet" href="assets/scss/footer_style.css">
 		<link rel="stylesheet" href="assets/scss/past_events_main_part_style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -21,8 +19,8 @@
 		?>
 
 
-		<main>
-			<h2>
+		<main style="margin-top: 20px;">
+			<h2 style="font-size: 200%; margin-top: 0;">
 				Past Events
 			</h2>
 
@@ -32,10 +30,5 @@
 				?>
 			</div>
 		</main>
-
-
-		<?php
-			require "footer.php";
-		?>
 	</body>
 </html>

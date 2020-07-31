@@ -1,6 +1,6 @@
 <?php
 	require "include/functions.php";
-	require_once "include/bdb.php";
+	// require_once "include/bdb.php";
 	require "include/header.php";
 
 	logged_only();
@@ -8,13 +8,14 @@
 	$usersession = $_SESSION["auth"] -> username;
 	$id = $_GET["id"];
 	$bdd =
-			// new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-			new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
-	
+			new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+			// new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+			
 	$request = $bdd -> prepare("SELECT author FROM event WHERE id=?");
 	$request -> execute(array($id));
 	$test = $request->fetch();
-	if ($usersession === $test["author"]){
+	
+	if ($usersession == $test["author"]){
 
 
 	if (isset($_POST["editevent"]))	{
@@ -58,11 +59,12 @@
 echo "<html>
 		<head>
 	<meta charset='utf-8' />
+	<link href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap' rel='stylesheet'>
 	<title>edit event</title>
 </head>
 <body>
 <main>
-	<h1>Edit Event</h1>";
+	<h1 style='text-align: center; font-family: Comfortaa, cursive; font-size: 300%;'>Edit Event</h1>";
 
 	$id = $_GET["id"];
 	$bdd =
@@ -73,29 +75,29 @@ echo "<html>
 	$data = $request->fetch();
 	$date_time_default= $data["date_time"];
 	$date_time_default = date('Y-m-d\TH:i:s',strtotime($date_time_default));
-	echo "<form  method=\"post\" action=\"editevent.php?id=".$id."\" enctype=\"multipart/form-data\">
-		<input type='text' name='id' value='".$id."'>
-		<div>
+	echo "<form  method=\"post\" action=\"editevent.php?id=".$id."\" enctype=\"multipart/form-data\" style='width: 50%; margin: 0 auto 20px auto;'>
+		<input type='text' hidden name='id' value='".$id."'>
+		<div class='form-group'>
 			<label for=\"title\">Title</label>
-			<input type=\"text\" name=\"title\" required value='".$data["title"]."'>
+			<input type=\"text\" name=\"title\" required value='".$data["title"]."' class='form-control'>
 		</div>
-		<div>
+		<div class='form-group'>
 			<label for=\"date_time\">Date and Time</label>
-			<input type=\"datetime-local\" name=\"date_time\" value='".$date_time_default."'>
+			<input type=\"datetime-local\" name=\"date_time\" value='".$date_time_default."' class='form-control'>
 		</div>
-		<div>
+		<div class='form-group'>
 			<label for=\"image\">Image</label>
-			<input type=\"file\" name=\"image\">
-			<img src='".$data["image"]."'>
+			<input type=\"file\" name=\"image\" class='form-control'>
+			<img src='".$data["image"]."' style='width: 100%;'>
 		</div>
-		<div>
+		<div class='form-group'>
 			<label for=\"description\">Description</label>
-			<input type=\"text\" name=\"description\" value='".$data["description"]."'>
+			<input type=\"text\" name=\"description\" value='".$data["description"]."' class='form-control'>
 		</div>";
 		if($data["category"] == "party"){
-			echo "<div>
+			echo "<div class='form-group'>
 			<label for=\"category\">category</label>
-			<select name=\"category\">
+			<select name=\"category\" class='form-control'>
 				<option value=\"party\"selected='selected'>party</option>
 				<option value=\"concert\">concert</option>
 				<option value=\"meeting\">meeting</option>
@@ -104,9 +106,9 @@ echo "<html>
 		</div>";
 		}
 		if ($data["category"] == "concert"){
-			echo "<div>
+			echo "<div class='form-group'>
 			<label for=\"category\">category</label>
-			<select name=\"category\">
+			<select name=\"category\" class='form-control'>
 				<option value=\"party\">party</option>
 				<option value=\"concert\"selected='selected'>concert</option>
 				<option value=\"meeting\">meeting</option>
@@ -115,9 +117,9 @@ echo "<html>
 		</div>";
 		}
 		if ($data["category"] == "meeting"){
-			echo "<div>
+			echo "<div class='form-group'>
 			<label for=\"category\">category</label>
-			<select name=\"category\">
+			<select name=\"category\" class='form-control'>
 				<option value=\"party\">party</option>
 				<option value=\"concert\">concert</option>
 				<option value=\"meeting\"selected='selected'>meeting</option>
@@ -126,9 +128,9 @@ echo "<html>
 		</div>";
 		}
 		if ($data["category"] == "festival"){
-			echo "<div>
+			echo "<div class='form-group'>
 			<label for=\"category\">category</label>
-			<select name=\"category\">
+			<select name=\"category\" class='form-control'>
 				<option value=\"party\">party</option>
 				<option value=\"concert\">concert</option>
 				<option value=\"meeting\">meeting</option>
@@ -137,7 +139,7 @@ echo "<html>
 		</div>";
 		}
 		echo "
-		<button type='submit' name='editevent'>Edit Event</button>
+		<button type='submit' name='editevent' class='btn btn-primary'>Edit Event</button>
 	</form>
 
 

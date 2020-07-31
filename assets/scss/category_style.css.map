@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEI,IAFA,CAEA,IAAI,CACJ;EACI,MAAM,EAAE,CAAC;CAaZ",
+    "sources": [
+        "category_style.scss"
+    ],
+    "names": [],
+    "file": "category_style.css"
+}
