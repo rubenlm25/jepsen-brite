@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="becode">
+    <serverData>
+      <paths name="becode">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="projects/jepsen-brite" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
