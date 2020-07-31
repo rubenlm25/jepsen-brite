@@ -29,7 +29,11 @@
                 $request =$bdd->prepare("SELECT * FROM event WHERE category = ? ");
                 $request ->execute(array($choice));
                 while($data = $request->fetch()){
-                    echo "<p>titre : ".$data["title"]."</p>";
+                            echo "<div>
+                            <p>title : ".$data["title"]."</p>
+                            <p>date and hour :".$data["date_hour"]."</p>
+                            <a href='eventpage.php?id=".$data["id"]."'>
+                        </div>";
                     }
                 }
             ?>
