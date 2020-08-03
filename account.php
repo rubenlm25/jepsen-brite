@@ -6,10 +6,9 @@
 
 	logged_only();
 
-<<<<<<< HEAD
+
 	if (!empty($_POST['avatar']))
 	debug($_SESSION);
-=======
 
 logged_only();
 
@@ -21,7 +20,7 @@ $size = 100;
 $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_profile)  ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
 
 
->>>>>>> 3a461880003652092bfef2e0086e884803565217
+
 
 ?>
 
@@ -29,12 +28,10 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
 	<h2>HELLO <?= $_SESSION['auth']->username; ?> Welcome to Jepsen-Brite!</h2>
 </div>
 <div class="container">
-<<<<<<< HEAD
 	<h3>User informations</h3>
 	<h4> Your Pseudo :    <?= $_SESSION['auth']->username; ?></h4>
 	<h4>Your Email : <?= $_SESSION['auth']->email; ?></h4>
 </div>
-=======
     <h3>User informations</h3>
     <h4> Your Pseudo :    <?= $_SESSION['auth']->username; ?></h4>
     <h4>Your Email : <?= $_SESSION['auth']->email; ?></h4><br>
@@ -44,5 +41,4 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
 
 </div><br><br>
 
-<img src=" <?= $_SESSION['auth']->avatar; ?>"</img>
->>>>>>> 3a461880003652092bfef2e0086e884803565217
+<img src=" <?= $_SESSION['auth']->avatar; ?>">
