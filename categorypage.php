@@ -1,6 +1,5 @@
 
 <html>
-<<<<<<< HEAD
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="category_style.css">
@@ -66,7 +65,6 @@
 				}
 			}
 		?>
-=======
     <head>
         <meta charset="utf-8" />
         <title>category page</title>
@@ -104,7 +102,6 @@
                     }
                 }
             ?>
->>>>>>> 3a461880003652092bfef2e0086e884803565217
 
 		</main>
 	</body>
