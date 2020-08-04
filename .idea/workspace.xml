@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/categorypage.php" beforeDir="false" afterPath="$PROJECT_DIR$/categorypage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-    </list>
+    <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +78,7 @@
       <workItem from="1596027474014" duration="1831000" />
       <workItem from="1596196392778" duration="491000" />
       <workItem from="1596442545071" duration="991000" />
+      <workItem from="1596450123950" duration="80000" />
     </task>
     <servers />
   </component>
@@ -88,6 +86,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Deployment" timestamp="1596450197977">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Deployment/0.0.1440.900@0.0.1440.900" timestamp="1596450197977" />
     <state x="0" y="421" width="1910" height="361" key="#SQL_Dialects" timestamp="1595426475285">
       <screen x="0" y="65" width="1920" height="1080" />
     </state>

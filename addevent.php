@@ -21,8 +21,8 @@ if (isset($_POST['addevent']) ){
 	function send_data($title, $author, $date_time, $description, $category, $image_name, $image_tmp_name, $image_type)
 	{
 		$bdd =
-			new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-			// new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+			//new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+			 new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
 		$request = $bdd -> prepare("INSERT INTO event(title, author, date_time, description, category, image, image_type) VALUES (?, ?, ?, ?, ?, ?, ?)");
 		$request -> execute(array($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type));
 		$lastid = $bdd ->lastInsertId();
