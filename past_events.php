@@ -15,7 +15,7 @@
 	
 	<body>
 		<?php
-			require "include/navbar.php";
+			require "include/header.php";
 		?>
 
 

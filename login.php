@@ -26,7 +26,7 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
 
 
 
-<?php require './include/navbar.php'; ?>
+<?php require './include/header.php'; ?>
 
 <h2> LOGIN</h2>
 

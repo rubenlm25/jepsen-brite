@@ -4,7 +4,7 @@
 session_start();
 require_once './include/functions.php';
 require_once './include/bdb.php';
-require './include/navbar.php';
+require './include/header.php';
 
 logged_only();
 

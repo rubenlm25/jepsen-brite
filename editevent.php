@@ -1,7 +1,7 @@
 <?php
 	require "include/functions.php";
 	// require_once "include/bdb.php";
-	require "include/navbar.php";
+	require "include/header.php";
 
 	logged_only();
 
