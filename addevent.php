@@ -2,7 +2,7 @@
 
 require_once './include/functions.php';
 require_once './include/bdb.php';
-require './include/header.php';
+require './include/navbar.php';
 logged_only();
 if (isset($_POST['addevent']) ){
 	$title = $_POST["title"];

@@ -6,7 +6,7 @@
 		<title>category page</title>
 	</head>
 	<body>
-		<?php require "include/header.php"; ?>
+		<?php require "include/navbar.php"; ?>
 		<main>
 			<h1 style="font-family: 'Comfortaa', cursive; font-size: 200%; text-align: center;">category page</h1>
 			<h2 style="font-size: 150%; text-align: center;">Choose a category</h2>

@@ -74,16 +74,7 @@ if(!empty($_POST))
 }
 
 ?>
-
-
-
-
-
-
-
-
-
-<?php require './include/header.php' ?>
+<?php require './include/navbar.php' ?>
 <div class="container">
     <head>
         <h1> Registration</h1>

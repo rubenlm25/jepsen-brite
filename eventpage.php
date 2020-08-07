@@ -9,7 +9,7 @@
 			<?php
 			require_once "./include/functions.php";
 			require_once "./include/bdb.php";
-			require "./include/header.php";
+			require "./include/navbar.php";
 				$id = $_GET["id"];
 				$bdd =
 					//new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
