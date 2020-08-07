@@ -98,7 +98,7 @@ if(!empty($_POST))
                 <ul>
                     <li><?= $error; ?></li>
                 </ul>
-            <? endforeach; ?>
+            <?php endforeach; ?>
         </div>
     <?php endif; ?>
 
@@ -124,12 +124,7 @@ if(!empty($_POST))
             <input type="password" name="password_confirm" class="form-control" />
         </div>
 
-        <!--<form action="" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Avatar : </label>
-                <input type="file" name="avatar"   class=" btn btn-warning" ><br>
-            </div>
-        </form > -->
+
 
 
         <button type="submit" class="btn btn-primary">Register your account</button>
