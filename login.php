@@ -18,7 +18,7 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
         }else{
             $_SESSION['flash']['danger'] = "Incorrect username or password !";
         }
-    debug($_SESSION);
+    //debug($_SESSION);
 }
 
 ?>
@@ -28,7 +28,7 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
 
 <?php require './include/header.php'; ?>
 
-<h2> LOGIN</h2>
+<h2 class="container"> LOGIN</h2>
 
 
 <form  action="" method="POST" enctype="multipart/form-data" class="container"  >

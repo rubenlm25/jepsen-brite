@@ -13,6 +13,7 @@ if (!$_SESSION['mdp']){
 <head>
     <title>Membres-Administration</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <?php
     require './include/header.php';
     ?>
@@ -24,7 +25,9 @@ if ($select_users->rowCount() > 0){
     while($m = $select_users->fetch()){
         ?>
         <div class="container">
-        <b><?=  $m['username']; ?>  <?=  $m['email']; ?></b> <a href="modify.php?id=<?= $m['id']; ?>">Modifier</a><hr/>
+        <b>PSEUDO:<?= $m['username']; ?><span>//</span> EMAIL:<span></span>  <?=  $m['email']; ?> <span>//</span>INSCRIT DEPUIS LE :<span></span>  <?=  $m['confirmed_at']; ?></b> <a href="admin_modify.php?id=<?= $m['id']; ?>" style="text-decoration: none;">Modifier</a><br><br>
+
+<a href="admin_delete.php?id=<?= $m['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a><hr/>
         </div>
         <?php
 

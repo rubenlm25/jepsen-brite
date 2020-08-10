@@ -44,7 +44,7 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
 
 
     <div class="container" align = "center">
-        <h1>HELLO <?= $_SESSION['auth']->username; ?> Welcome to Jepsen-Brite!</h1>
+        <h2 style="color: indianred;">HELLO ! </h2><h1> <?= $_SESSION['auth']->username; ?></h1><h2 style="color: indianred;"> Welcome to Jepsen-Brite!</h2>
     </div><br><br><br>
     <img src="<?php echo $grav_url; ?>" alt="" /><br><br><br><br>
     <div class="container" align = "center">

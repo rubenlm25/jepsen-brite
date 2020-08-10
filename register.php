@@ -122,7 +122,7 @@ if(!empty($_POST))
 
     </form><br><br>
 
-
+<h3>Use your GRAVATAR account to set your profil picture!</h3>
 
 
 

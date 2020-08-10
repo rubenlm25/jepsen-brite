@@ -15,8 +15,14 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
         if (isset($_POST['modifier_membre'])){
             $username_modify = htmlspecialchars($_POST['username']);
             $email_modify = htmlspecialchars($_POST['email']);
-            $modify_info_member = $pdo->prepare('UPDATE users SET username=? AND email=? WHERE id=?');
-            $modify_info_member->execute(array($username_modify, $))
+            $modify_username_member = $pdo->prepare('UPDATE users SET username=?  WHERE id=?');
+            $modify_username_member->execute(array($username_modify, $getid));
+            $modify_email_member = $pdo->prepare('UPDATE users SET email=?  WHERE id=?');
+            $modify_email_member->execute(array($email_modify, $getid));
+            $_SESSION['flash']['success'] = "les info membres ont bien été modifiée";
+            header('Location:admin_members.php');
+            //
+
         }
 }else{
     $SESSION['flash']['warning'] = "utilisateur introuvable...";
