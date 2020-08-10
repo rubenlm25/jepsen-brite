@@ -19,6 +19,7 @@ if (!$_SESSION['mdp']){
     ?>
 </head>
 <body>
+<h3 class="container">Gestion Membres</h3>
 <?php
 $select_users = $pdo->query('SELECT * FROM users');
 if ($select_users->rowCount() > 0){
@@ -39,7 +40,7 @@ if ($select_users->rowCount() > 0){
 ?>
 <div class="container">
     <button type="button" class="btn btn-danger">
-        <a href="admin_logout.php" style="color: white;text-decoration: none;">log out</a>
+        <a href="admin_login.php" style="color: white;text-decoration: none;">log out</a>
     </button>
 </div>
 <div class="container">

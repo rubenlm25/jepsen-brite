@@ -47,12 +47,12 @@ require './include/bdb.php';
 </div><br><br><br><br>
 <div >
     <button type="button" class="btn btn-primary">
-    <a href="admin_members.php" style="color: white;text-decoration: none;">gestion Evenements</a><br><br><br>
+    <a href="admin_events.php" style="color: white;text-decoration: none;">gestion Evenements</a><br><br><br>
         </button>
 </div>
 <div >
     <button type="button" class="btn btn-primary">
-    <a href="admin_members.php" style="color: white;text-decoration: none;">gestion commentaires</a><br><br><br>
+    <a href="#" style="color: white;text-decoration: none;">gestion commentaires</a><br><br><br>
         </button>
 </div>
 </div><br><br><br>
