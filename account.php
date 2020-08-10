@@ -4,7 +4,7 @@
 session_start();
 require_once './include/functions.php';
 require_once './include/bdb.php';
-require './include/header.php';
+
 
 logged_only();
 
@@ -20,105 +20,111 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
 
 ?>
 
-<div class="container" align = "center">
-    <h1>HELLO <?= $_SESSION['auth']->username; ?> Welcome to Jepsen-Brite!</h1>
-</div><br><br><br>
 
-<div class="container">
-    <img src="<?php echo $grav_url; ?>" alt="" /><br><br><br><br>
-    <h3>User informations</h3><br><br>
-    <h4> Your Pseudo :    <?= $_SESSION['auth']->username; ?></h4>
-    <h4>Your Email : <?= $_SESSION['auth']->email; ?></h4><br><br><br>
-
-</div><br><br><br><br>
 
 
 <!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <?php require './include/header.php';?>
 
 </head>
+<br><br>
 <body>
+
 <div class="container">
-<button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
-    Events created
-</button>
 
-<!-- Modal -->
-<div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+
+
+    <div class="container" align = "center">
+        <h1>HELLO <?= $_SESSION['auth']->username; ?> Welcome to Jepsen-Brite!</h1>
+    </div><br><br><br>
+    <img src="<?php echo $grav_url; ?>" alt="" /><br><br><br><br>
+    <div class="container" align = "center">
+        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+            Events created
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                ...
+        </div>
+
+        <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+            Events you participated
+        </button>
+
+        <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+
+        <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+            Events you will participate
+        </button>
+
+        <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <h3>User informations</h3><br>
+    <h4> Your Pseudo :    <?= $_SESSION['auth']->username; ?></h4>
+    <h4>Your Email : <?= $_SESSION['auth']->email; ?></h4><br><br><br>
 
-<button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
-    Events you participated
-</button>
-
-<div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#exampleModalLong">
-    Events you will participate
-</button>
-
-<div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

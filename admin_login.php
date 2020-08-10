@@ -14,14 +14,14 @@ if (isset($_POST['connexion_admin'])){
                 $_SESSION['mdp'] = $mdp;
                 header('Location:admin.php');
             }else{
-                echo "non";
+                $_SESSION['flash']['danger']= 'Mot de passe ou pseudo incorrect';
 
             }
         }else{
-            echo 'tui';
+            $_SESSION['flash']['danger']= 'Mot de passe ou pseudo incorrect';
         }
     }else{
-        echo'Veuillez completer les champs vides';
+        $_SESSION['flash']['danger']= 'Veuillez compléter tous les champs';
     }
 }
 
@@ -35,7 +35,7 @@ if (isset($_POST['connexion_admin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?php require './include/header.php' ?>
     <!-- Bootstrap CSS -->
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
     <title></title>
 </head>

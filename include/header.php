@@ -97,8 +97,8 @@ if(session_status() == PHP_SESSION_NONE){
 			<li class="nav-item">
 				<a class="nav-link" href="categorypage.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Categories</a>
 			</li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin_login.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Admin</a>
+                <li class="nav-item " >
+                    <a class="nav-link " href="../admin_login.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Administration</a>
                 </li>
 
 			<?php endif; ?>
