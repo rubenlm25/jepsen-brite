@@ -17,8 +17,7 @@ $size = 100;
 
 $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_profile)  ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
 
-
-?>
+ ?>
 
 
 
@@ -53,41 +52,66 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
         </button>
 
         <!-- Modal -->
-        <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade  " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Your events</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+<?php
+
+                        require_once './include/functions.php';
+                        require './include/bdb.php';
+                        $user_event = $_SESSION['auth']->username;
+                        $request = $pdo->prepare("SELECT * FROM event where author=?");
+                        $request->execute(array($user_event));
+                        while ($data = $request->fetch()) {
+?>
+                            <b>DATE: <span></span><?= $data->date_time; ?></b><br>
+                            <b>TITLE: <span></span><?= $data->title; ?></b><br>
+                            <b>AUTHOR: <span></span><?= $data->author; ?></b><br>
+                            <b>DESCRIPTION: <span></span><?= $data->description; ?></b><br>
+                            <b>DESCRIPTION: <span></span><?= $data->category; ?></b><br>
+                            <b>DESCRIPTION: <span></span><?= $data->sous_category; ?></b><br>
+
+                            <div> <img src="<?=$data->image ?>" alt="image" style="width: 100px; height: 100px;"></div>
+                            <hr/>
+
+
+<?php
+
+                        }
+                        ?>
+
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
-            Events you participated
+            Events you participated to
         </button>
 
         <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Your Past events</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -105,7 +129,7 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Your futur Events</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

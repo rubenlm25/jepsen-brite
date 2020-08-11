@@ -1,38 +1,51 @@
 
+<?php
+$bdd =
+    //new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+    new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+$id = $_GET["id"];
+
+if(isset($_POST["participate"])){
+    $actionparticipate = $bdd ->prepare("INSERT INTO participate (event_id,user_id) VALUE (?,?)");
+    $actionparticipate->execute(array($id,$_SESSION["auth"]->id));
+}
+if(isset($_POST["unparticipe"])){
+    $actionparticipate = $bdd ->prepare("DELETE FROM participate WHERE event_id = ? AND user_id = ?");
+    $actionparticipate->execute(array($id,$_SESSION["auth"]->id));
+}
+?>
 <html style="position: relative; min-height: 100%;;">
-	<head>
-		<meta charset="utf-8" />
-		<title>event page</title>
-	</head>
-	<body>
-		<main>
-			<?php
-			require_once "./include/functions.php";
-			require_once "./include/bdb.php";
-			require "./include/header.php";
-				$id = $_GET["id"];
-				$bdd =
-					//new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-					 new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
-				$request = $bdd ->prepare("SELECT * FROM event where id=?");
-				$request ->execute(array($id));
-				$data = $request->fetch();
-            if(isset($_SESSION['auth'])){
-                $usersession = $_SESSION["auth"] -> username;
-            }
-            else{
-                $usersession=null;
-            }
+<head>
+    <meta charset="utf-8" />
+    <title>event page</title>
+</head>
+<body>
+<main>
+    <?php
+    require_once "include/functions.php";
+    require_once "include/bdb.php";
+    require "include/header.php";
 
-				$auth = $bdd -> prepare("SELECT author FROM event WHERE id=?");
-				$auth -> execute(array($id));
-				$test = $auth->fetch();
-				$actualdate = date('Y-m-d H:i:s');
-			
+    $request = $bdd ->prepare("SELECT * FROM event where id=?");
+    $request ->execute(array($id));
+    $data = $request->fetch();
+    if(isset($_SESSION['auth'])){
+        $usersession = $_SESSION["auth"] -> username;
+        $userid = $_SESSION["auth"] -> id;
+    }
+    else{
+        $usersession=null;
+    }
 
-				echo
-					"<div class='card' style='width: 50%; margin: 0 auto 20px auto;'>
-						<img src='".$data['image']."' alt='Logo' class='card-img-top'>
+    $auth = $bdd -> prepare("SELECT author FROM event WHERE id=?");
+    $auth -> execute(array($id));
+    $test = $auth->fetch();
+    $actualdate = date('Y-m-d H:i:s');
+
+
+    echo
+        "<div class='card' style='width: 50%; margin: 0 auto 20px auto;'>
+						<img src='".$data['image']."' alt='Logo' class='card-img-top' style='height: 200px;width: 200px;'>
 						<div class='card-body'>
 							<h3 class='card-title'>
 								".$data["title"]."
@@ -45,20 +58,43 @@
 							</div>
 							<div class='card-text'>
 								<span class='font-weight-bold'>Category :</span><br>".$data["category"]."
+							</div>
+							<div class='card-text'>
+							    <span class='font-weight-bold'>Category :</span><br>".$data["sous_category"]."
 							</div>";
-							if ($usersession === $test["author"] && $data["date_time"] > $actualdate){
-								echo
-								"<div>
+    if ($usersession === $test["author"] && $data["date_time"] > $actualdate){
+        echo
+            "<div>
 									<a href='editevent.php?id=".$data["id"]."' class='card-link'>Edit this event</a>"
-								;
-							}
-						"</div>
+        ;
+    }
+    "</div>
 					</div>"
-				;
-			?>
-		</main>
+    ;
+    ?>
 
-	</body>
+    <?php
+    if(isset($_SESSION["auth"])){
+        $participate = $bdd ->prepare("SELECT * FROM participe WHERE event_id = ? AND user_id =? ");
+        $participate ->execute(array($id,$userid));
+        $dataparticipate = $participate->fetch();
+        debug($dataparticipate);
+        if (empty($dataparticipate)){
+            ?>
+            <a href="participe-post.php?id=<?=$id ?>&action=yes">participe</a>
+            <?
+        }
+        else{
+            ?>
+            <a href="participe-post.php?id=<?=$id ?>&action=no">unparticipe</a>
+            <?
+        }
+    }
+
+    ?>
+
+</main>
+</body>
 </html>
 
 

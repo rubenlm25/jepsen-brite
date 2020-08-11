@@ -1,4 +1,13 @@
+<?php
 
+session_start();
+$pdo = new PDO('mysql:dbname=jepsen-brite;host=localhost', 'root', '');
+if (!$_SESSION['mdp']){
+
+    header('Location:admin_login.php');
+
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +24,33 @@
 </head>
 <body>
 <div class="container">
-<h3>GESTION EVENEMENTS</h3>
+<h3 align="center">GESTION EVENEMENTS</h3>
 </div>
 
+<?php
+$select_event = $pdo->query('SELECT * FROM event');
+if ($select_event->rowCount() > 0){
+    while($ev = $select_event->fetch()){
+        ?>
+        <div class="container">
+            <b><p>TITLE:<span></span> <?= $ev['title']; ?></p><p> AUTHOR:<span></span>  <?=  $ev['author']; ?> </p><p>Date et Heure: <span></span>  <?=  $ev['date_time']; ?></p>
+                         </b><br><br>
 
+            <div> <img src="<?=$ev['image'] ?>" alt="image" style="width: 100px; height: 100px;"></div>
+            <br><br>
+            <div>
+            <a href="admin_modify_event.php?id=<?= $ev['id']; ?>" style="text-decoration: none;">Modifier</a><br><br></div>
+
+            <a href="admin_delete.php?id=<?= $ev['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a><hr/>
+        </div>
+        <?php
+
+    }
+}else{
+    echo "aucun membre";
+}
+
+?>
 
 <div class="container">
     <button type="button" class="btn btn-danger">

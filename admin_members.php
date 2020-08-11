@@ -26,9 +26,9 @@ if ($select_users->rowCount() > 0){
     while($m = $select_users->fetch()){
         ?>
         <div class="container">
-        <b>PSEUDO:<?= $m['username']; ?><span>//</span> EMAIL:<span></span>  <?=  $m['email']; ?> <span>//</span>INSCRIT DEPUIS LE :<span></span>  <?=  $m['confirmed_at']; ?></b> <a href="admin_modify.php?id=<?= $m['id']; ?>" style="text-decoration: none;">Modifier</a><br><br>
+        <b><p>PSEUDO: <span></span><?= $m['username']; ?></p><p> EMAIL: <span></span>  <?=  $m['email']; ?></p> <span></span>INSCRIT DEPUIS LE : <span></span>  <?=  $m['confirmed_at']; ?></b><br><br><p> <a href="admin_modify.php?id=<?= $m['id']; ?>" style="text-decoration: none;">Modifier</a></p>
 
-<a href="admin_delete.php?id=<?= $m['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a><hr/>
+<p><a href="admin_delete.php?id=<?= $m['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a></p><hr/>
         </div>
         <?php
 
