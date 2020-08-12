@@ -42,17 +42,19 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
 
 
 
-    <div class="container" align = "center">
-        <h2 style="color: indianred;">HELLO ! </h2><h1> <?= $_SESSION['auth']->username; ?></h1><h2 style="color: indianred;"> Welcome to Jepsen-Brite!</h2>
+    <div class="container bg-dark " align = "center" style="border: transparent;border-radius: 20px 20px;padding-top: 15px; max-width: 750px;">
+        <img src="<?php echo $grav_url; ?>" alt="gravatar_picture" style="padding-top: 5px;"/>
+        <h2 style="color: #f5deb3;">HELLO ! </h2><h1 style="color: whitesmoke"> <?= $_SESSION['auth']->username; ?></h1><h2 style="color: wheat;"> Welcome to Jepsen-Brite!</h2>
+
     </div><br><br><br>
-    <img src="<?php echo $grav_url; ?>" alt="" /><br><br><br><br>
+    <br>
     <div class="container" align = "center">
-        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+        <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModalLong1">
             Events created
         </button>
 
         <!-- Modal -->
-        <div class="modal fade  " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade  " id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -62,6 +64,10 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                         </button>
                     </div>
                     <div class="modal-body">
+
+                        <div style="width: 100%; height: 150px;">
+
+                        </div>
 <?php
 
                         require_once './include/functions.php';
@@ -75,8 +81,8 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                             <b>TITLE: <span></span><?= $data->title; ?></b><br>
                             <b>AUTHOR: <span></span><?= $data->author; ?></b><br>
                             <b>DESCRIPTION: <span></span><?= $data->description; ?></b><br>
-                            <b>DESCRIPTION: <span></span><?= $data->category; ?></b><br>
-                            <b>DESCRIPTION: <span></span><?= $data->sous_category; ?></b><br>
+                            <b>STYLE: <span></span><?= $data->category; ?></b><br>
+                            <b>MUSIQUE: <span></span><?= $data->sous_category; ?></b><br>
 
                             <div> <img src="<?=$data->image ?>" alt="image" style="width: 100px; height: 100px;"></div>
                             <hr/>
@@ -97,11 +103,11 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
             </div>
         </div>
 
-        <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+        <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModalLong2">
             Events you participated to
         </button>
 
-        <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg " id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -115,17 +121,17 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+        <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModalLong3">
             Events you will participate
         </button>
 
-        <div class="modal fade bd-example-modal-lg " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg " id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -139,16 +145,17 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <h3>User informations</h3><br>
-    <h4> Your Pseudo :    <?= $_SESSION['auth']->username; ?></h4>
-    <h4>Your Email : <?= $_SESSION['auth']->email; ?></h4><br><br><br>
-
+    <div><br><br>
+    <h3 style="color: wheat;padding: 5px; " >User informations</h3>
+    <h4 style="color: navajowhite;"> Your Pseudo :    <?= $_SESSION['auth']->username; ?></h4>
+    <h4 style="color: navajowhite;">Your Email : <?= $_SESSION['auth']->email; ?></h4><br><br><br>
+    </div>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

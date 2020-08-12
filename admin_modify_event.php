@@ -62,7 +62,7 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
         </div>
         <div class="form-group">
             <label for=""><b>DATE & HEURE</b> </label>
-            <input type="text" name="title" class="form-control" value="<?= $result['date_time']; ?>" />
+            <input type="text" name="date" class="form-control" value="<?= $result['date_time']; ?>" />
         </div>
         
         <br><br><br>

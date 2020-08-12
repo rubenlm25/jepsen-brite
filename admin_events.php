@@ -28,7 +28,7 @@ if (!$_SESSION['mdp']){
 </div>
 
 <?php
-$select_event = $pdo->query('SELECT * FROM event');
+$select_event = $pdo->query('SELECT * FROM event ORDER BY date_time DESC ');
 if ($select_event->rowCount() > 0){
     while($ev = $select_event->fetch()){
         ?>
@@ -36,7 +36,7 @@ if ($select_event->rowCount() > 0){
             <b><p>TITLE:<span></span> <?= $ev['title']; ?></p><p> AUTHOR:<span></span>  <?=  $ev['author']; ?> </p><p>Date et Heure: <span></span>  <?=  $ev['date_time']; ?></p>
                          </b><br><br>
 
-            <div> <img src="<?=$ev['image'] ?>" alt="image" style="width: 100px; height: 100px;"></div>
+            <div> <img src="<?=$ev['image'] ?>" alt="image" style="width: 200px; height: 200px;"></div>
             <br><br>
             <div>
             <a href="admin_modify_event.php?id=<?= $ev['id']; ?>" style="text-decoration: none;">Modifier</a><br><br></div>

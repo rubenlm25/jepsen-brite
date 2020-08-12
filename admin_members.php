@@ -19,7 +19,7 @@ if (!$_SESSION['mdp']){
     ?>
 </head>
 <body>
-<h3 class="container">Gestion Membres</h3>
+<h3 class="container">Gestion Membres</h3><br><br>
 <?php
 $select_users = $pdo->query('SELECT * FROM users');
 if ($select_users->rowCount() > 0){

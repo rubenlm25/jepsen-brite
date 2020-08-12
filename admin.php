@@ -39,12 +39,12 @@ require './include/bdb.php';
 
 
 <h1 class="container" align="center">Admin Panel</h1><br><br><br><br><br>
-<div class="inline container">
+<div class="inline">
 <div>
     <button type="button" class="btn btn-primary">
     <a href="admin_members.php" style="color: white;text-decoration: none;">gestion membres</a><br><br><br>
         </button>
-</div><br><br><br><br>
+</div>
 <div >
     <button type="button" class="btn btn-primary">
     <a href="admin_events.php" style="color: white;text-decoration: none;">gestion Evenements</a><br><br><br>
@@ -56,7 +56,7 @@ require './include/bdb.php';
         </button>
 </div>
 </div><br><br><br>
-<div class="container">
+<div class="container btn-lg" style="margin-left: 120px;">
 <button type="button" class="btn btn-danger">
     <a href="admin_logout.php" style="color: white;text-decoration: none;">log out</a>
 </button>
