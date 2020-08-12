@@ -75,7 +75,7 @@ if(session_status() == PHP_SESSION_NONE){
 			<?php else: ?>
 
 			<li class="nav-item active">
-				<a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Sign In<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Sign Up<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Log In</a>
