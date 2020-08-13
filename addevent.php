@@ -48,7 +48,8 @@ if (isset($_POST['addevent']) ){
     }
     else
     {
-        echo 'Please enter a picture of ".jpg", ".jpeg", ".png" or ".gif" type.';
+       // echo 'Please enter a picture of ".jpg", ".jpeg", ".png" or ".gif" type.';
+        $_SESSION['flash']['danger'] = "Please enter a picture of \".jpg\", \".jpeg\", \".png\" or \".gif\" type.";
     }
 
 }

@@ -65,13 +65,13 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                     </div>
                     <div class="modal-body">
 
-                        <div style="width: 100%; height: 150px;">
+                        <div style="width: 100px; height: 150px;">
 
                         </div>
 <?php
 
                         require_once './include/functions.php';
-                        require './include/bdb.php';
+                        require_once './include/bdb.php';
                         $user_event = $_SESSION['auth']->username;
                         $request = $pdo->prepare("SELECT * FROM event where author=?");
                         $request->execute(array($user_event));
@@ -117,8 +117,57 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                         </button>
                     </div>
                     <div class="modal-body">
+                        <div style="width: 100px; height: 150px;">
+
+                        </div>
+
+
+                        <?Php
+                                require_once './include/functions.php';
+                                require_once './include/bdb.php';
+                                $user_event_participe = $_SESSION['auth']->id;
+                                //debug($_SESSION['auth']);
+
+
+                                $request = $pdo->prepare("SELECT * FROM participe where user_id=?");
+                                $request->execute(array($user_event_participe));
+                                $date_courante = new DateTime();
+
+                                while( $data=$request->fetch()) {
+                                $event_id = $data->event_id;
+                                $table = $pdo->prepare('SELECT * FROM event WHERE id=? AND date_time < CURRENT_DATE ');
+                                $table->execute(array($event_id));
+                                $result = $table->fetchAll();
+
+
+                               // debug( $result);
+                                   // echo "<pre>";
+                                   // print_r($result);
+                                    foreach ($result as $res){
+                                        ?>
+                                        <b>DATE: <span></span><?= $res->date_time; ?></b><br>
+                                        <b>TITLE: <span></span><?= $res->title; ?></b><br>
+                                        <b>AUTHOR: <span></span><?= $res->author; ?></b><br>
+                                        <b>DESCRIPTION: <span></span><?= $res->description; ?></b><br>
+                                        <b>STYLE: <span></span><?= $res->category; ?></b><br>
+                                        <b>MUSIQUE: <span></span><?= $res->sous_category; ?></b><br>
+
+                                        <div> <img src="<?=$data->image ?>" alt="image" style="width: 100px; height: 100px;"></div>
+                                        <hr/>
+
+
+                                        <?php
+
+                                    }
+
+                                }
+
+
+
+                                ?>
 
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
@@ -141,7 +190,82 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+<?php
+                       // require_once './include/functions.php';
+                      //  require_once './include/bdb.php';
+                       // $user_event_participe = $_SESSION['auth']->id;
+                        //debug($_SESSION['auth']);
+
+
+                     //   $request = $pdo->prepare("SELECT * FROM participe where user_id=?");
+                      //  $request->execute(array($user_event_participe));
+                     //   $date_courante = new DateTime();
+                     //   while( $data= $request->fetch()) {
+                         //   $event_id = $data->event_id;
+                         //   $table = $pdo->prepare('SELECT * FROM event WHERE id=?');
+                          //  $table->execute(array($event_id));
+                          //  while ($result = $table->fetch()) {
+                               // $date = $result->date_time;
+
+                              //  if ($date_courante > $date) {
+
+                                  //  echo $result->date_time;
+                              //  }
+                           // }
+                       // }
+
+
+                       // echo" salut";
+                       // ?>
+
+
+
+                        <?Php
+                        require_once './include/functions.php';
+                        require_once './include/bdb.php';
+                        $user_event_participe = $_SESSION['auth']->id;
+                        //debug($_SESSION['auth']);
+
+
+                        $request = $pdo->prepare("SELECT * FROM participe where user_id=?");
+                        $request->execute(array($user_event_participe));
+                        $date_courante = new DateTime();
+
+                        while( $data=$request->fetch()) {
+                            $event_id = $data->event_id;
+                            $table = $pdo->prepare('SELECT * FROM event WHERE id=? AND date_time > CURRENT_DATE ');
+                            $table->execute(array($event_id));
+                            $result = $table->fetchAll();
+
+
+                            // debug( $result);
+                            // echo "<pre>";
+                            // print_r($result);
+                            foreach ($result as $res){
+                                ?>
+                                <b>DATE: <span></span><?= $res->date_time; ?></b><br>
+                                <b>TITLE: <span></span><?= $res->title; ?></b><br>
+                                <b>AUTHOR: <span></span><?= $res->author; ?></b><br>
+                                <b>DESCRIPTION: <span></span><?= $res->description; ?></b><br>
+                                <b>STYLE: <span></span><?= $res->category; ?></b><br>
+                                <b>MUSIQUE: <span></span><?= $res->sous_category; ?></b><br>
+
+
+                                <div> <img src="<?=$res->image ?>" alt="image" style="width: 100px; height: 100px;"></div>
+                                <hr/>
+
+
+                                <?php
+
+                            }
+
+                        }
+
+
+
+                        ?>
+
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

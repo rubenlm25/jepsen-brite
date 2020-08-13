@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/Parsedown.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_events.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_members.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_members.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_modify_event.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_modify_event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addevent.php" beforeDir="false" afterPath="$PROJECT_DIR$/addevent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/eventpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/participate-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/participe-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +42,9 @@
     <property name="settings.editor.selected.configurable" value="SQL Resolution Scopes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/administration" />
@@ -52,11 +53,14 @@
       <recent name="$PROJECT_DIR$/include" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.admin.php">
+  <component name="RunManager" selected="JavaScript Debug.account.php">
     <configuration name="account.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://127.0.0.1/projects/jepsen-brite/account.php">
       <method v="2" />
     </configuration>
     <configuration name="admin.php" type="JavascriptDebugType" nameIsGenerated="true" uri="http://127.0.0.1/projects/jepsen-brite/admin.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="eventpage.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://127.0.0.1/projects/jepsen-brite/eventpage.php">
       <method v="2" />
     </configuration>
     <configuration name="register.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://127.0.0.1/projects/jepsen-brite/register.php">
@@ -65,6 +69,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.account.php" />
+        <item itemvalue="JavaScript Debug.eventpage.php" />
         <item itemvalue="JavaScript Debug.register.php" />
       </list>
     </recent_temporary>
@@ -109,6 +114,10 @@
       <workItem from="1597218456809" duration="11013000" />
       <workItem from="1597235467747" duration="467000" />
       <workItem from="1597235958120" duration="362000" />
+      <workItem from="1597236356766" duration="479000" />
+      <workItem from="1597236853831" duration="6196000" />
+      <workItem from="1597301734779" duration="11707000" />
+      <workItem from="1597319352766" duration="11045000" />
     </task>
     <servers />
   </component>
@@ -142,41 +151,49 @@
     </state>
     <state x="600" y="409" width="546" height="640" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1595492266684" />
     <state x="620" y="370" width="546" height="640" key="FileChooserDialogImpl/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1595434404698" />
-    <state width="1848" height="330" key="GridCell.Tab.0.bottom" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.0.bottom" timestamp="1597324927946">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927946" />
     <state width="1850" height="268" key="GridCell.Tab.0.bottom/0.0.3360.1145@0.0.3360.1145" timestamp="1595410414956" />
     <state width="1848" height="330" key="GridCell.Tab.0.bottom/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
-    <state width="1848" height="330" key="GridCell.Tab.0.center" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.0.center" timestamp="1597324927946">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927946" />
     <state width="1850" height="268" key="GridCell.Tab.0.center/0.0.3360.1145@0.0.3360.1145" timestamp="1595410414955" />
     <state width="1848" height="330" key="GridCell.Tab.0.center/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
-    <state width="1848" height="330" key="GridCell.Tab.0.left" timestamp="1597092967712">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.0.left" timestamp="1597324927945">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927945" />
     <state width="1850" height="268" key="GridCell.Tab.0.left/0.0.3360.1145@0.0.3360.1145" timestamp="1595410414954" />
     <state width="1848" height="330" key="GridCell.Tab.0.left/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967712" />
-    <state width="1848" height="330" key="GridCell.Tab.0.right" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.0.right" timestamp="1597324927946">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927946" />
     <state width="1850" height="268" key="GridCell.Tab.0.right/0.0.3360.1145@0.0.3360.1145" timestamp="1595410414956" />
     <state width="1848" height="330" key="GridCell.Tab.0.right/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
-    <state width="1848" height="330" key="GridCell.Tab.1.bottom" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.1.bottom" timestamp="1597324927947">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927947" />
     <state width="1848" height="330" key="GridCell.Tab.1.bottom/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
-    <state width="1848" height="330" key="GridCell.Tab.1.center" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.1.center" timestamp="1597324927947">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927947" />
     <state width="1848" height="330" key="GridCell.Tab.1.center/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
-    <state width="1848" height="330" key="GridCell.Tab.1.left" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.1.left" timestamp="1597324927946">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927946" />
     <state width="1848" height="330" key="GridCell.Tab.1.left/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
-    <state width="1848" height="330" key="GridCell.Tab.1.right" timestamp="1597092967713">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state width="1848" height="330" key="GridCell.Tab.1.right" timestamp="1597324927947">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1848" height="330" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1597324927947" />
     <state width="1848" height="330" key="GridCell.Tab.1.right/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597092967713" />
     <state x="256" y="75" key="SettingsEditor" timestamp="1596551878447">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -185,16 +202,20 @@
     <state x="434" y="239" key="SettingsEditor/0.0.3360.1145@0.0.3360.1145" timestamp="1595402872380" />
     <state x="248" y="240" key="SettingsEditor/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1595434428167" />
     <state x="2059" y="0" key="SettingsEditor/0.65.1920.1080/1920.0.1440.900@1920.0.1440.900" timestamp="1596450312170" />
-    <state x="0" y="229" width="555" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597234416148">
-      <screen x="0" y="65" width="1920" height="1080" />
-    </state>
-    <state x="0" y="164" width="555" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1597155380921" />
-    <state x="0" y="174" width="1920" height="789" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3360.1145@0.0.3360.1145" timestamp="1595409287762" />
-    <state x="0" y="229" width="1039" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597234416148" />
-    <state x="2125" y="137" width="1020" height="620" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@1920.0.1440.900" timestamp="1595256572187" />
-    <state x="539" y="42" width="840" height="1037" key="search.everywhere.popup" timestamp="1596551837145">
+    <state x="0" y="164" width="555" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597329625362">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="539" y="42" width="840" height="1037" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1596551837145" />
+    <state x="0" y="164" width="555" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1597329625362" />
+    <state x="0" y="174" width="1920" height="789" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3360.1145@0.0.3360.1145" timestamp="1595409287762" />
+    <state x="0" y="229" width="1039" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1597242528339" />
+    <state x="2125" y="137" width="1020" height="620" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@1920.0.1440.900" timestamp="1595256572187" />
+    <state x="34" y="35" width="736" height="1008" key="dock-window-1" timestamp="1597314894020">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="34" y="35" width="736" height="1008" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1597314894020" />
+    <state x="539" y="42" width="840" height="1037" key="search.everywhere.popup" timestamp="1597312965930">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="539" y="42" width="840" height="1037" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1597312965930" />
   </component>
 </project>
