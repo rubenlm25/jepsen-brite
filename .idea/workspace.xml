@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Parsedown.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addevent.php" beforeDir="false" afterPath="$PROJECT_DIR$/addevent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/connection_to_database.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/connection_to_database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/categorypage.php" beforeDir="false" afterPath="$PROJECT_DIR$/categorypage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commentpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/commentpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editevent.php" beforeDir="false" afterPath="$PROJECT_DIR$/editevent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/eventpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/bdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bdb.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +33,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
   <component name="ProjectId" id="1ex4tGCO4oIidaT7vVJqq6koPHm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -34,7 +61,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -81,21 +108,56 @@
       <workItem from="1596027474014" duration="1831000" />
       <workItem from="1596196392778" duration="491000" />
       <workItem from="1596442545071" duration="991000" />
+      <workItem from="1596461593671" duration="2000" />
+      <workItem from="1596461617939" duration="29115000" />
+      <workItem from="1596571229962" duration="22631000" />
+      <workItem from="1596709140490" duration="2842000" />
+      <workItem from="1596715857086" duration="12000" />
+      <workItem from="1596715928780" duration="2104000" />
+      <workItem from="1596787037552" duration="17213000" />
+      <workItem from="1597046779212" duration="9976000" />
+      <workItem from="1597066844317" duration="25854000" />
+      <workItem from="1597216897569" duration="16482000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="421" width="1910" height="361" key="#SQL_Dialects" timestamp="1595426475285">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state x="556" y="182" key="#Deployment" timestamp="1596461808691">
+      <screen x="0" y="0" width="1920" height="1044" />
     </state>
+    <state x="556" y="182" key="#Deployment/0.0.1920.1044@0.0.1920.1044" timestamp="1596461808691" />
+    <state x="844" y="389" key="#Notifications" timestamp="1596461110289">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="844" y="389" key="#Notifications/0.0.1920.1044@0.0.1920.1044" timestamp="1596461110289" />
+    <state x="642" y="144" key="#PHP" timestamp="1596454755461">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="642" y="144" key="#PHP/0.0.1920.1044@0.0.1920.1044" timestamp="1596454755461" />
+    <state x="556" y="164" key="#Plugins" timestamp="1596709330710">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="556" y="164" key="#Plugins/0.0.1920.1044@0.0.1920.1044" timestamp="1596709330710" />
+    <state x="0" y="344" width="1910" height="361" key="#SQL_Dialects" timestamp="1596458958953">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="0" y="344" key="#SQL_Dialects/0.0.1920.1044@0.0.1920.1044" timestamp="1596458958953" />
     <state x="0" y="421" width="1910" height="361" key="#SQL_Dialects/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1595426475285" />
-    <state x="555" y="259" width="800" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595426121626">
-      <screen x="0" y="65" width="1920" height="1080" />
+    <state x="555" y="188" width="808" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596788170034">
+      <screen x="0" y="0" width="1920" height="1044" />
     </state>
+    <state x="555" y="188" width="808" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1596788170034" />
     <state x="555" y="259" width="800" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1595426121626" />
+    <state x="644" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596715797360">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="644" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1596715797360" />
     <state x="627" y="289" width="655" height="626" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596009246927">
       <screen x="0" y="65" width="1920" height="1080" />
     </state>
@@ -104,6 +166,10 @@
       <screen x="0" y="65" width="1920" height="1080" />
     </state>
     <state x="355" y="65" width="1199" height="1076" key="CommitChangelistDialog2/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1595575235801" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1596572270859">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1920.1044@0.0.1920.1044" timestamp="1596572270859" />
     <state x="600" y="409" width="546" height="640" key="FileChooserDialogImpl" timestamp="1595492266684">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -129,9 +195,18 @@
     </state>
     <state width="1850" height="268" key="GridCell.Tab.0.right/0.0.3360.1145@0.0.3360.1145" timestamp="1595410414956" />
     <state width="1848" height="266" key="GridCell.Tab.0.right/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1596027446874" />
-    <state x="256" y="75" key="SettingsEditor" timestamp="1595492269160">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="235" height="500" key="HiddenNamespacesPopup" timestamp="1596458067922">
+      <screen x="0" y="0" width="1920" height="1044" />
     </state>
+    <state width="235" height="500" key="HiddenNamespacesPopup/0.0.1920.1044@0.0.1920.1044" timestamp="1596458067922" />
+    <state x="778" y="448" width="363" height="152" key="NewPhpFileDialog" timestamp="1597069916191">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="778" y="448" width="363" height="152" key="NewPhpFileDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1597069916191" />
+    <state x="256" y="73" key="SettingsEditor" timestamp="1596708729584">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="256" y="73" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1596708729584" />
     <state x="256" y="75" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595492269160" />
     <state x="434" y="239" key="SettingsEditor/0.0.3360.1145@0.0.3360.1145" timestamp="1595402872380" />
     <state x="248" y="240" key="SettingsEditor/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1595434428167" />
@@ -142,5 +217,13 @@
     <state x="0" y="174" width="1920" height="789" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3360.1145@0.0.3360.1145" timestamp="1595409287762" />
     <state x="0" y="229" width="1039" height="785" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1596027856788" />
     <state x="2125" y="137" width="1020" height="620" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@1920.0.1440.900" timestamp="1595256572187" />
+    <state x="620" y="238" key="run.anything.popup" timestamp="1597302655139">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="620" y="238" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1597302655139" />
+    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1597155499846">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1597155499846" />
   </component>
 </project>

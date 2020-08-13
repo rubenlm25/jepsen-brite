@@ -43,7 +43,7 @@
 						"<div class='card' style='width: 50%; margin: 0 auto 20px auto;'>
 							<img src='".$data['image']."' alt='Logo' class='card-img-top'>
 							<div class='card-body'>
-								<h3 class='card-title'>
+								<h3 class='card-title'>                             
 									".$data["title"]."
 								</h3>
 								<div class='card-text'>
