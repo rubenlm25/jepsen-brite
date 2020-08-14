@@ -85,8 +85,14 @@ $id = $_GET["id"];
 			
 
 				echo
-					"<div class='card' style='width: 50%; margin: 0 auto 20px auto;'>
-						<img src='".$data['image']."' alt='Logo' class='card-img-top'>
+"<div class='card' style='width: 50%; margin: 0 auto 20px auto;'>";
+					if(isset($data['image']) and empty($data['video'])){
+					    echo "<img src='".$data['image']."' alt='Logo' class='card-img-top'>";
+					}
+					else if (isset($data['video']) and empty($data['image'])) {
+					    echo "<iframe width='640' height='360' src ='https://www.youtube.com/embed/".$data['video']."' frameborder='0' allowfullscreen></iframe>";
+                    }
+					echo "
 						<div class='card-body'>
 							<h3 class='card-title'>
 								".$data["title"]."

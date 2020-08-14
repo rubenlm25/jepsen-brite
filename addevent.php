@@ -13,6 +13,7 @@ if (isset($_POST['addevent']) ){
 	$address = $_POST["address"];
 	$postal = $_POST["postal_code"];
 	$city = $_POST["city"];
+	$video = $_POST["video"];
 
 	$image_name = $_FILES['image']['name'];
 	$image_tmp_name = $_FILES['image']['tmp_name'];
@@ -21,39 +22,46 @@ if (isset($_POST['addevent']) ){
 
 	$allowed_filetypes = ["jpg", "jpeg", "png", "gif"];
     echo "category".$category."sous category".$sous_category."title".$title."author".$author."date_time".$date_time."description".$description;
-	function send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city)
+	function send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video)
 	{
 		$bdd =
 			new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
 			 //new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
-		$request = $bdd -> prepare("INSERT INTO event(title, author, date_time, description, image, image_type,category,sous_category,address,postal_code,city) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?,?)");
-		$request -> execute(array($title, $author, $date_time, $description, $image_tmp_name, $image_type,$category,$sous_category,$address,$postal,$city));
+		$request = $bdd -> prepare("INSERT INTO event(title, author, date_time, description, image, image_type,category,sous_category,address,postal_code,city,video) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)");
+		$request -> execute(array($title, $author, $date_time, $description, $image_tmp_name, $image_type,$category,$sous_category,$address,$postal,$city,$video));
         $lastid = $bdd ->lastInsertId();
 //        header("location:eventpage.php?id=".$lastid);
 	}
 
-	if ($image_type === $allowed_filetypes[0])
+	if ($image_type === $allowed_filetypes[0]and empty($video))
 	{
 		$image_tmp_name = "data:image/jpg;base64," . base64_encode($image_tmp_name);
-        send_data($title, $author, $date_time, $description, $category,  $image_tmp_name, $image_type,$sous_category,$address,$postal,$city);	}
-	else if ($image_type === $allowed_filetypes[1])
+        send_data($title, $author, $date_time, $description, $category,  $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);	}
+	else if ($image_type === $allowed_filetypes[1]and empty($video))
 	{
 		$image_tmp_name = "data:image/jpeg;base64," . base64_encode($image_tmp_name);
-        send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city);	}
-	else if ($image_type === $allowed_filetypes[2])
+        send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);	}
+	else if ($image_type === $allowed_filetypes[2]and empty($video))
 	{
 		$image_tmp_name = "data:image/png;base64," . base64_encode($image_tmp_name);
-        send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city);	}
-	else if ($image_type === $allowed_filetypes[3])
+        send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);	}
+	else if ($image_type === $allowed_filetypes[3]and empty($video))
 	{
 		$image_tmp_name = "data:image/gif;base64," . base64_encode($image_tmp_name);
-		send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city);
+		send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);
 	}
+    else if (isset($_POST['video']) and empty($image_name)) {
+        $video = preg_replace("#.*youtube\.com/watch\?v=#", "", $video);
+        send_data($title, $author, $date_time, $description, $image_tmp_name, $image_type,$category,$sous_category, $video);
+    }
 	else
 	{
 		echo 'Please enter a picture of ".jpg", ".jpeg", ".png" or ".gif" type.';
 	}
 
+}
+if($_POST['image'] = null and $_POST['video'] = null) {
+    echo "Please enter a picture or a video";
 }
 
 ?>
@@ -82,6 +90,10 @@ if (isset($_POST['addevent']) ){
 				<label for="image" style="font-size: 110%;">Image</label>
 				<input type="file" required name="image" class="form-control-file">
 			</div>
+            <div class="form-group">
+                <label for="video" style="font-size: 110%;">Video link</label><br>
+                <input type="text" id="video" name="video" class="form-control-file">
+            </div>
 			<div class="form-group">
 				<label for="description" style="font-size: 110%;">Description</label>
 				<input type="text" name="description" required class="form-control">
