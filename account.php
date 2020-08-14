@@ -152,7 +152,7 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email_p
                                         <b>STYLE: <span></span><?= $res->category; ?></b><br>
                                         <b>MUSIQUE: <span></span><?= $res->sous_category; ?></b><br>
 
-                                        <div> <img src="<?=$data->image ?>" alt="image" style="width: 100px; height: 100px;"></div>
+                                        <div> <img src="<?=$res->image ?>" alt="image" style="width: 100px; height: 100px;"></div>
                                         <hr/>
 
 
