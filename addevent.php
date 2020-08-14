@@ -24,8 +24,8 @@ if (isset($_POST['addevent']) ){
 	function send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city)
 	{
 		$bdd =
-			//new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-			 new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
+			new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+			 //new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
 		$request = $bdd -> prepare("INSERT INTO event(title, author, date_time, description, image, image_type,category,sous_category,address,postal_code,city) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?,?)");
 		$request -> execute(array($title, $author, $date_time, $description, $image_tmp_name, $image_type,$category,$sous_category,$address,$postal,$city));
         $lastid = $bdd ->lastInsertId();
@@ -104,8 +104,8 @@ if (isset($_POST['addevent']) ){
 
                 <?php
                 $bdd =
-                    //new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-                    new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
+                    new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+                    //new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
                     $category = $bdd->query("SELECT * FROM category");
                     $sous_category = $bdd ->query("SELECT * FROM sous_category ");
                     while ($data = $category->fetch()){
