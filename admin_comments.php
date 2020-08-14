@@ -69,7 +69,7 @@ while($comment = $select_comments->fetch()){
 
 
 
-        <a href="admin_delete.php?id=<?= $comment['id']; ?>" style="color: red;text-decoration: none;font-weight: bold;">SUPPRIMER</a><hr/>
+        <a href="admin_delete_comment.php?id=<?= $comment['id']; ?>" style="color: red;text-decoration: none;font-weight: bold;">SUPPRIMER</a><hr/>
     </div>
     <?php
 }

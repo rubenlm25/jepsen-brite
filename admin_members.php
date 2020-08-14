@@ -29,7 +29,7 @@ if ($select_users->rowCount() > 0){
         <div class="container">
         <b><p>PSEUDO: <span></span><?= $m['username']; ?></p><p> EMAIL: <span></span>  <?=  $m['email']; ?></p> <span></span>INSCRIT DEPUIS LE : <span></span>  <?=  $m['confirmed_at']; ?></b><br><br><p> <a href="admin_modify.php?id=<?= $m['id']; ?>" style="text-decoration: none;">Modifier</a></p>
 
-<p><a href="admin_delete.php?id=<?= $m['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a></p><hr/>
+<p><a href="admin_delete_members.php?id=<?= $m['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a></p><hr/>
         </div>
         <?php
 

@@ -41,7 +41,7 @@ if ($select_event->rowCount() > 0){
             <div>
             <a href="admin_modify_event.php?id=<?= $ev['id']; ?>" style="text-decoration: none;">Modifier</a><br><br></div>
 
-            <a href="admin_delete.php?id=<?= $ev['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a><hr/>
+            <a href="admin_delete_event.php?id=<?= $ev['id']; ?>" style="color: red;text-decoration: none;">Supprimer</a><hr/>
         </div>
         <?php
 
