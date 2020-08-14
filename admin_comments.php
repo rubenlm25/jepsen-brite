@@ -80,7 +80,21 @@ while($comment = $select_comments->fetch()){
         <a href="admin_logout.php" style="color: white;text-decoration: none;">log out</a>
     </button>
 </div>
+<div class="container">
+    <nav aria-label="...">
+        <ul class="pagination">
 
+            <li class="page-item"><a class="page-link" href="admin.php">previous </a></li>
+            <li >
+                <a class="page-link" href="">1 </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
 </div>
 </body>
 </html>
