@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Parsedown.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/participe-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addevent.php" beforeDir="false" afterPath="$PROJECT_DIR$/addevent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/connection_to_database.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/connection_to_database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categorypage.php" beforeDir="false" afterPath="$PROJECT_DIR$/categorypage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commentpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/commentpost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editevent.php" beforeDir="false" afterPath="$PROJECT_DIR$/editevent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eventpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/eventpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bdb.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +105,8 @@
       <workItem from="1596787037552" duration="17213000" />
       <workItem from="1597046779212" duration="9976000" />
       <workItem from="1597066844317" duration="25854000" />
-      <workItem from="1597216897569" duration="16482000" />
+      <workItem from="1597216897569" duration="17379000" />
+      <workItem from="1597305029569" duration="12676000" />
     </task>
     <servers />
   </component>
@@ -199,10 +188,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state width="235" height="500" key="HiddenNamespacesPopup/0.0.1920.1044@0.0.1920.1044" timestamp="1596458067922" />
-    <state x="778" y="448" width="363" height="152" key="NewPhpFileDialog" timestamp="1597069916191">
+    <state x="778" y="448" width="363" height="152" key="NewPhpFileDialog" timestamp="1597326435539">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="778" y="448" width="363" height="152" key="NewPhpFileDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1597069916191" />
+    <state x="778" y="448" width="363" height="152" key="NewPhpFileDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1597326435539" />
     <state x="256" y="73" key="SettingsEditor" timestamp="1596708729584">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
