@@ -11,8 +11,8 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
     $getid = $_GET['id'];
     $delete_member_info = $pdo->prepare('DELETE FROM users WHERE id = ?');
     $delete_member_info->execute(array($getid));
-     $_SESSION['flash']['success'] = "utilisateur supprimé !";
-     header('Location:admin_events.php');
+    $_SESSION['flash']['success'] = "utilisateur supprimé !";
+    header('Location:admin_events.php');
 }else{
     $_SESSION['flash']['danger']= "utilisateur introuvable";
 }
@@ -27,6 +27,14 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
     $_SESSION['flash']['danger']= "événement  introuvable";
 }
 
+if (isset($_GET['id']) AND !empty($_GET['id'])){
+    $getid = $_GET['id'];
+    $delete_com = $pdo->prepare('DELETE FROM comment WHERE id = ?');
+    $delete_com->execute(array($getid));
+    $_SESSION['flash']['success'] = "comment delete successfully !";
+    header('Location:admin_comments.php');
+}else{
+    $_SESSION['flash']['danger']= "commentaire  introuvable";
+}
+
 ?>
-
-
