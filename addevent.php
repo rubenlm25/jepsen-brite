@@ -33,26 +33,26 @@ if (isset($_POST['addevent']) ){
 //        header("location:eventpage.php?id=".$lastid);
 	}
 
-	if ($image_type === $allowed_filetypes[0]and empty($video))
+	if ($image_type === $allowed_filetypes[0] and empty($video))
 	{
 		$image_tmp_name = "data:image/jpg;base64," . base64_encode($image_tmp_name);
         send_data($title, $author, $date_time, $description, $category,  $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);	}
-	else if ($image_type === $allowed_filetypes[1]and empty($video))
+	else if ($image_type === $allowed_filetypes[1] and empty($video))
 	{
 		$image_tmp_name = "data:image/jpeg;base64," . base64_encode($image_tmp_name);
         send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);	}
-	else if ($image_type === $allowed_filetypes[2]and empty($video))
+	else if ($image_type === $allowed_filetypes[2] and empty($video))
 	{
 		$image_tmp_name = "data:image/png;base64," . base64_encode($image_tmp_name);
         send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);	}
-	else if ($image_type === $allowed_filetypes[3]and empty($video))
+	else if ($image_type === $allowed_filetypes[3] and empty($video))
 	{
 		$image_tmp_name = "data:image/gif;base64," . base64_encode($image_tmp_name);
 		send_data($title, $author, $date_time, $description, $category, $image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);
 	}
     else if (isset($_POST['video']) and empty($image_name)) {
         $video = preg_replace("#.*youtube\.com/watch\?v=#", "", $video);
-        send_data($title, $author, $date_time, $description, $image_tmp_name, $image_type,$category,$sous_category, $video);
+        send_data($title, $author, $date_time, $description,$category,$image_tmp_name, $image_type,$sous_category,$address,$postal,$city,$video);
     }
 	else
 	{
