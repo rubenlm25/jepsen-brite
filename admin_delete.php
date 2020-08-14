@@ -1,7 +1,7 @@
 <?php
 session_start();
 $pdo = new PDO('mysql:dbname=jepsen-brite;host=localhost', 'root', '');
-if ($_SESSION['mdp']){
+if (!$_SESSION['mdp']){
 
     header('Location:admin_login.php');
 
@@ -24,6 +24,16 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
     header('Location:admin_events.php');
 }else{
     $_SESSION['flash']['danger']= "événement  introuvable";
+}
+
+if (isset($_GET['id']) AND !empty($_GET['id'])){
+    $getid = $_GET['id'];
+    $delete_com = $pdo->prepare('DELETE FROM comment WHERE id = ?');
+    $delete_com->execute(array($getid));
+    $_SESSION['flash']['success'] = "comment delete successfully !";
+    header('Location:admin_comments.php');
+}else{
+    $_SESSION['flash']['danger']= "commentaire  introuvable";
 }
 
 ?>

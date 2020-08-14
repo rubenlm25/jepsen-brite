@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-if ($_SESSION['mdp']){
+if (!$_SESSION['mdp']){
 
     header('Location:admin_login.php');
 
@@ -52,7 +52,7 @@ require './include/bdb.php';
 </div>
 <div >
     <button type="button" class="btn btn-primary">
-    <a href="#" style="color: white;text-decoration: none;">gestion commentaires</a><br><br><br>
+    <a href="admin_comments.php" style="color: white;text-decoration: none;">gestion commentaires</a><br><br><br>
         </button>
 </div>
 </div><br><br><br>
