@@ -3,6 +3,17 @@ if(session_status() == PHP_SESSION_NONE){
 	session_start();
 }
 		?>
+<?php if (isset($_SESSION['flash'])): ?>
+    <?php foreach($_SESSION['flash'] as $type => $message): ?>
+
+        <div class="alert alert-<?= $type; ?>">
+            <?= $message; ?>
+        </div>
+    <?php endforeach; ?>
+    <?php unset($_SESSION['flash']); ?>
+<?php endif; ?>
+
+
 <!doctype html>
 <body lang="en">
 <head>
@@ -75,7 +86,7 @@ if(session_status() == PHP_SESSION_NONE){
 			<?php else: ?>
 
 			<li class="nav-item active">
-				<a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Sign Up<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Sign UP<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Log In</a>
@@ -86,6 +97,9 @@ if(session_status() == PHP_SESSION_NONE){
 			<li class="nav-item">
 				<a class="nav-link" href="categorypage.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Categories</a>
 			</li>
+                <li class="nav-item " >
+                    <a class="nav-link " href="admin_login.php" tabindex="-1" aria-disabled="true" style="font-family: 'Comfortaa', cursive; font-size: 125%;">Administration</a>
+                </li>
 
 			<?php endif; ?>
 		</ul>
@@ -93,15 +107,7 @@ if(session_status() == PHP_SESSION_NONE){
 </nav>
 <div class="container">
 
-	<?php if (isset($_SESSION['flash'])): ?>
-	<?php foreach($_SESSION['flash'] as $type => $message): ?>
 
-	<div class="alert alert-<?= $type; ?>">
-		<?= $message; ?>
-	</div>
-	<?php endforeach; ?>
-		<?php unset($_SESSION['flash']); ?>
-	<?php endif; ?>
 
 
 </div>
