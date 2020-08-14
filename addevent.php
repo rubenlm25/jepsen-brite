@@ -88,7 +88,7 @@ if($_POST['image'] = null and $_POST['video'] = null) {
 			</div>
 			<div class="form-group">
 				<label for="image" style="font-size: 110%;">Image</label>
-				<input type="file" required name="image" class="form-control-file">
+				<input type="file" name="image" class="form-control-file">
 			</div>
             <div class="form-group">
                 <label for="video" style="font-size: 110%;">Video link</label><br>
