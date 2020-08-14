@@ -1,7 +1,7 @@
 <?php
 session_start();
 $pdo = new PDO('mysql:dbname=jepsen-brite;host=localhost', 'root', '');
-if (!$_SESSION['mdp']){
+if ($_SESSION['mdp']){
 
     header('Location:admin_login.php');
 
