@@ -1,15 +1,15 @@
 <?php
 	require "include/functions.php";
 	// require_once "include/bdb.php";
-	require "include/header.php";
+
 
 	logged_only();
 
 	$usersession = $_SESSION["auth"] -> username;
 	$id = $_GET["id"];
 	$bdd =
-			new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-			// new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+			//new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+			 new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
 			
 	$request = $bdd -> prepare("SELECT author FROM event WHERE id=?");
 	$request -> execute(array($id));
@@ -25,11 +25,14 @@
 		$description = $_POST["description"];
 		$category = $_POST["category"];
 		$image = $_FILES['image']['name'];
-		
+		$sous_category = $_POST['sous_category'];
+        $address = $_POST["address"];
+        $postal = $_POST["postal_code"];
+        $city = $_POST["city"];
 		
 		if(empty($image)){
-			$request = $bdd -> prepare("UPDATE event SET title=?,date_time=?,description=?,category=? WHERE id=?");
-			$request -> execute(array($title,$date_time,$description,$category,$id));
+			$request = $bdd -> prepare("UPDATE event SET title=?,date_time=?,description=?,category=?,sous_category=?,address=?,postal_code=?,city=? WHERE id=?");
+			$request -> execute(array($title,$date_time,$description,$category,$sous_category,$address,$postal,$city,$id));
 		}
 		else{
 			$image_name = $_FILES['image']['name'];
@@ -49,13 +52,14 @@
 			} else {
 				echo 'Please enter a picture of ".jpg", ".jpeg", ".png" or ".gif" type.';
 			}
-			$request = $bdd->prepare("UPDATE event SET title=?,date_time=?,image=?,image_type=?,description=?,category=? WHERE id=?");
-			$request->execute(array($title, $date_time, $image_tmp_name, $image_type, $description, $category, $id));
+			$request = $bdd->prepare("UPDATE event SET title=?,date_time=?,image=?,image_type=?,description=?,category=?,sous_category=?,address=?,postal_code=?,city=? WHERE id=?");
+			$request->execute(array($title, $date_time, $image_tmp_name, $image_type, $description, $category,$sous_category,$address,$postal,$city,$id));
 
 		}
 
 		header("location:eventpage.php?id=".$id);
 	}
+        require "include/header.php";
 echo "<html>
 		<head>
 	<meta charset='utf-8' />
@@ -68,8 +72,8 @@ echo "<html>
 
 	$id = $_GET["id"];
 	$bdd =
-		new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
-		// new PDO("mysql:host=localhost;dbname=jepsen-brite","root","");
+		//new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');
+		 new PDO("mysql:host=localhost;dbname=jepsen-brite","root","root");
 	$request = $bdd ->prepare("SELECT * FROM event where id=?");
 	$request ->execute(array($id));
 	$data = $request->fetch();
@@ -93,7 +97,19 @@ echo "<html>
 		<div class='form-group'>
 			<label for=\"description\">Description</label>
 			<input type=\"text\" name=\"description\" value='".$data["description"]."' class='form-control'>
-		</div>";
+		</div>             
+		<div class='form-group'>
+                <label for='address' style='font-size: 110%;'>Address</label>
+                <input type='text' name='address' required class='form-control' value='".$data["address"]."'>
+            </div>
+            <div class='form-group'>
+                <label for='postal_code' style='font-size: 110%;'>Postal Code</label>
+                <input type='text' name='postal_code' required class='form-control' value='".$data["postal_code"]."'>
+            </div>
+            <div class='form-group'>
+                <label for='city' style='font-size: 110%;'>City</label>
+                <input type='text' name='city' required class='form-control' value='".$data["city"]."'>
+            </div>";
 		if($data["category"] == "party"){
 			echo "<div class='form-group'>
 			<label for=\"category\">category</label>
@@ -138,6 +154,10 @@ echo "<html>
 			</select>
 		</div>";
 		}
+        $sous_category = $bdd ->query("SELECT * FROM sous_category ");
+        while ($data =$sous_category->fetch()){
+            echo "<span class='form-control'>".$data["title"]."</span><input type='radio' name='sous_category' value='".$data["title"]."' >";
+        }
 		echo "
 		<button type='submit' name='editevent' class='btn btn-primary'>Edit Event</button>
 	</form>

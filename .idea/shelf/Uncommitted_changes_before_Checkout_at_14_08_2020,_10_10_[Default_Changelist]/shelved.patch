@@ -1,0 +1,107 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8fe7013a-a845-4af0-bf73-9b76e06548aa\" name=\"Default Changelist\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1ex4tGCO4oIidaT7vVJqq6koPHm\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.settingsdialog.IDE.editor.colors.PHP\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/fileUpload\" />\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/include\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"JavaScript Debug.account.php\">\n    <configuration name=\"account.php\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://127.0.0.1/projects/jepsen-brite/account.php\">\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"register.php\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://127.0.0.1/projects/jepsen-brite/register.php\">\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JavaScript Debug.account.php\" />\n        <item itemvalue=\"JavaScript Debug.register.php\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8fe7013a-a845-4af0-bf73-9b76e06548aa\" name=\"Default Changelist\" comment=\"\" />\n      <created>1595250122808</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1595250122808</updated>\n      <workItem from=\"1595250126585\" duration=\"4872000\" />\n      <workItem from=\"1595400983060\" duration=\"8773000\" />\n      <workItem from=\"1595410479094\" duration=\"26640000\" />\n      <workItem from=\"1595487880218\" duration=\"17727000\" />\n      <workItem from=\"1595573590150\" duration=\"16595000\" />\n      <workItem from=\"1595606615016\" duration=\"130000\" />\n      <workItem from=\"1595608157192\" duration=\"2467000\" />\n      <workItem from=\"1595843403692\" duration=\"14428000\" />\n      <workItem from=\"1595920616687\" duration=\"36051000\" />\n      <workItem from=\"1596005070251\" duration=\"13927000\" />\n      <workItem from=\"1596027474014\" duration=\"1831000\" />\n      <workItem from=\"1596196392778\" duration=\"491000\" />\n      <workItem from=\"1596442545071\" duration=\"991000\" />\n      <workItem from=\"1596450123950\" duration=\"80000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"320\" y=\"115\" key=\"#Deployment\" timestamp=\"1596450197977\">\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"900\" />\n    </state>\n    <state x=\"320\" y=\"115\" key=\"#Deployment/0.0.1440.900@0.0.1440.900\" timestamp=\"1596450197977\" />\n    <state x=\"0\" y=\"421\" width=\"1910\" height=\"361\" key=\"#SQL_Dialects\" timestamp=\"1595426475285\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"0\" y=\"421\" width=\"1910\" height=\"361\" key=\"#SQL_Dialects/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1595426475285\" />\n    <state x=\"555\" y=\"259\" width=\"800\" height=\"686\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1595426121626\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"555\" y=\"259\" width=\"800\" height=\"686\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1595426121626\" />\n    <state x=\"627\" y=\"289\" width=\"655\" height=\"626\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1596009246927\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"627\" y=\"289\" width=\"655\" height=\"626\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1596009246927\" />\n    <state x=\"355\" y=\"65\" width=\"1199\" height=\"1076\" key=\"CommitChangelistDialog2\" timestamp=\"1595575235801\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"355\" y=\"65\" width=\"1199\" height=\"1076\" key=\"CommitChangelistDialog2/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1595575235801\" />\n    <state x=\"600\" y=\"409\" width=\"546\" height=\"640\" key=\"FileChooserDialogImpl\" timestamp=\"1595492266684\">\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"600\" y=\"409\" width=\"546\" height=\"640\" key=\"FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080\" timestamp=\"1595492266684\" />\n    <state x=\"620\" y=\"370\" width=\"546\" height=\"640\" key=\"FileChooserDialogImpl/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1595434404698\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1596027446874\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state width=\"1850\" height=\"268\" key=\"GridCell.Tab.0.bottom/0.0.3360.1145@0.0.3360.1145\" timestamp=\"1595410414956\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.bottom/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1596027446874\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.center\" timestamp=\"1596027446874\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state width=\"1850\" height=\"268\" key=\"GridCell.Tab.0.center/0.0.3360.1145@0.0.3360.1145\" timestamp=\"1595410414955\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.center/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1596027446874\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.left\" timestamp=\"1596027446874\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state width=\"1850\" height=\"268\" key=\"GridCell.Tab.0.left/0.0.3360.1145@0.0.3360.1145\" timestamp=\"1595410414954\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.left/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1596027446874\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.right\" timestamp=\"1596027446874\">\n      <screen x=\"0\" y=\"65\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state width=\"1850\" height=\"268\" key=\"GridCell.Tab.0.right/0.0.3360.1145@0.0.3360.1145\" timestamp=\"1595410414956\" />\n    <state width=\"1848\" height=\"266\" key=\"GridCell.Tab.0.right/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1596027446874\" />\n    <state x=\"256\" y=\"75\" key=\"SettingsEditor\" timestamp=\"1595492269160\">\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"256\" y=\"75\" key=\"SettingsEditor/0.0.1920.1080@0.0.1920.1080\" timestamp=\"1595492269160\" />\n    <state x=\"434\" y=\"239\" key=\"SettingsEditor/0.0.3360.1145@0.0.3360.1145\" timestamp=\"1595402872380\" />\n    <state x=\"248\" y=\"240\" key=\"SettingsEditor/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1595434428167\" />\n    <state x=\"0\" y=\"164\" width=\"555\" height=\"785\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser\" timestamp=\"1596183093603\">\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1080\" />\n    </state>\n    <state x=\"0\" y=\"164\" width=\"555\" height=\"785\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080\" timestamp=\"1596183093603\" />\n    <state x=\"0\" y=\"174\" width=\"1920\" height=\"789\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3360.1145@0.0.3360.1145\" timestamp=\"1595409287762\" />\n    <state x=\"0\" y=\"229\" width=\"1039\" height=\"785\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080\" timestamp=\"1596027856788\" />\n    <state x=\"2125\" y=\"137\" width=\"1020\" height=\"620\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.65.1920.1080/1920.0.1440.900@1920.0.1440.900\" timestamp=\"1595256572187\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 7ba7f3596a30fd3bcf0d4fbd9b611b7f117a3004)
++++ .idea/workspace.xml	(date 1597391341537)
+@@ -1,7 +1,28 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="" />
++    <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -11,6 +32,11 @@
+     <execution />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProjectId" id="1ex4tGCO4oIidaT7vVJqq6koPHm" />
+@@ -20,8 +46,10 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="node.js.detected.package.eslint" value="true" />
+@@ -85,11 +113,23 @@
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="WindowStateProjectService">
+-    <state x="320" y="115" key="#Deployment" timestamp="1596450197977">
+-      <screen x="0" y="0" width="1440" height="900" />
++    <state x="320" y="125" key="#Deployment" timestamp="1597391036769">
++      <screen x="0" y="23" width="1440" height="797" />
+     </state>
+     <state x="320" y="115" key="#Deployment/0.0.1440.900@0.0.1440.900" timestamp="1596450197977" />
++    <state x="320" y="125" key="#Deployment/0.23.1440.797@0.23.1440.797" timestamp="1597391036769" />
+     <state x="0" y="421" width="1910" height="361" key="#SQL_Dialects" timestamp="1595426475285">
+       <screen x="0" y="65" width="1920" height="1080" />
+     </state>
+Index: .idea/webServers.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/webServers.xml	(date 1597391016572)
++++ .idea/webServers.xml	(date 1597391016572)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="WebServers">
++    <option name="servers">
++      <webServer id="2e415140-71f4-48f6-bfac-87ee58d6d9fa" name="localhost" url="http://localhost:8888">
++        <fileTransfer accessType="LOCAL" port="0" />
++      </webServer>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
