@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$pdo = new PDO('mysql:dbname=jepsen-brite;host=localhost', 'root', '');
-if (!$_SESSION['mdp']){
+$pdo =
+    new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_f2e7be08f8f82c4;charset=utf8','b5a83bf957a94e','e7c157ba');if (!$_SESSION['mdp']){
 
     header('Location:admin_login.php');
 
