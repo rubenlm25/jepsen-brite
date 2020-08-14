@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe7013a-a845-4af0-bf73-9b76e06548aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/954d5a6f-304d-4ba8-acd1-b46900ab4e33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/954d5a6f-304d-4ba8-acd1-b46900ab4e33.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ruben" />
+        <entry key="$PROJECT_DIR$" value="anso" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,10 +170,11 @@
     </state>
     <state width="1850" height="268" key="GridCell.Tab.0.right/0.0.3360.1145@0.0.3360.1145" timestamp="1595410414956" />
     <state width="1848" height="266" key="GridCell.Tab.0.right/0.65.1920.1080/1920.0.1440.900@0.65.1920.1080" timestamp="1596027446874" />
-    <state width="305" height="457" key="HiddenNamespacesPopup" timestamp="1597393460203">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="305" height="460" key="HiddenNamespacesPopup" timestamp="1597395778879">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state width="305" height="457" key="HiddenNamespacesPopup/0.23.1440.797@0.23.1440.797" timestamp="1597393460203" />
+    <state width="305" height="460" key="HiddenNamespacesPopup/0.23.1440.801@0.23.1440.801" timestamp="1597395778879" />
     <state x="256" y="75" key="SettingsEditor" timestamp="1595492269160">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

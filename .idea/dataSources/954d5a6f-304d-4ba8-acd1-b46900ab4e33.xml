@@ -649,35 +649,23 @@
       <ObjectGrants>ALL PRIVILEGES|heroku_f2e7be08f8f82c4:null
 </ObjectGrants>
     </user>
-    <table id="202" parent="2" name="comment"/>
-    <table id="203" parent="2" name="event"/>
-    <table id="204" parent="2" name="users">
+    <table id="202" parent="2" name="category"/>
+    <table id="203" parent="2" name="comment"/>
+    <table id="204" parent="2" name="event"/>
+    <table id="205" parent="2" name="participe"/>
+    <table id="206" parent="2" name="sous_category"/>
+    <table id="207" parent="2" name="users">
       <Collation>utf8mb4_general_ci</Collation>
     </table>
-    <column id="205" parent="202" name="id">
+    <column id="208" parent="202" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="206" parent="202" name="message">
+    <column id="209" parent="202" name="title">
       <Position>2</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="207" parent="202" name="author">
-      <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="208" parent="202" name="id_event">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="209" parent="202" name="date_time">
-      <Position>5</Position>
-      <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="210" parent="202" name="PRIMARY">
@@ -691,76 +679,173 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="212" parent="203" name="title">
+    <column id="212" parent="203" name="message">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="213" parent="203" name="author">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="214" parent="203" name="date_time">
+    <column id="214" parent="203" name="id_event">
       <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="215" parent="203" name="date_time">
+      <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="215" parent="203" name="image">
-      <Position>5</Position>
-      <DataType>longtext|0s</DataType>
-    </column>
-    <column id="216" parent="203" name="image_type">
-      <Position>6</Position>
-      <DataType>tinytext|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="217" parent="203" name="description">
-      <Position>7</Position>
-      <DataType>text|0s</DataType>
-    </column>
-    <column id="218" parent="203" name="category">
-      <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
-    </column>
-    <key id="219" parent="203" name="PRIMARY">
+    <key id="216" parent="203" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="220" parent="204" name="id">
+    <column id="217" parent="204" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="221" parent="204" name="username">
+    <column id="218" parent="204" name="title">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="219" parent="204" name="author">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="220" parent="204" name="date_time">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="221" parent="204" name="image">
+      <Position>5</Position>
+      <DataType>longtext|0s</DataType>
+    </column>
+    <column id="222" parent="204" name="image_type">
+      <Position>6</Position>
+      <DataType>tinytext|0s</DataType>
+    </column>
+    <column id="223" parent="204" name="video">
+      <Position>7</Position>
+      <DataType>longtext|0s</DataType>
+    </column>
+    <column id="224" parent="204" name="description">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="225" parent="204" name="category">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="226" parent="204" name="sous_category">
+      <Position>10</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="227" parent="204" name="address">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="228" parent="204" name="postal_code">
+      <Position>12</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="229" parent="204" name="city">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="230" parent="204" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="231" parent="205" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="232" parent="205" name="event_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="233" parent="205" name="user_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="234" parent="205" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="235" parent="206" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="236" parent="206" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="222" parent="204" name="email">
+    <column id="237" parent="206" name="id_category">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="238" parent="206" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="239" parent="207" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="240" parent="207" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="241" parent="207" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="223" parent="204" name="password">
+    <column id="242" parent="207" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="224" parent="204" name="confirmation_token">
+    <column id="243" parent="207" name="confirmation_token">
       <Position>5</Position>
       <DataType>varchar(60)|0s</DataType>
     </column>
-    <column id="225" parent="204" name="confirmed_at">
+    <column id="244" parent="207" name="confirmed_at">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="226" parent="204" name="avatar">
+    <column id="245" parent="207" name="avatar">
       <Position>7</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>longtext|0s</DataType>
     </column>
-    <key id="227" parent="204" name="PRIMARY">
+    <column id="246" parent="207" name="admin">
+      <Position>8</Position>
+      <DataType>tinyint(1)|0s</DataType>
+    </column>
+    <key id="247" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
