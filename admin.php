@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-if ($_SESSION['mdp']){
+if (!$_SESSION['mdp']){
 
     header('Location:admin_login.php');
 
